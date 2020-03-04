@@ -7,17 +7,32 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="navbar">
-      <a href="https://pages.gitlab.io/plain-html/">Plain HTML Example</a>
-      <a href="https://gitlab.com/pages/plain-html/">Repository</a>
-      <a href="https://gitlab.com/pages/">Other Examples</a>
-    </div>
+    <!--<div class="navbar">-->
+    <!--  <a href="https://pages.gitlab.io/plain-html/">Plain HTML Example</a>-->
+    <!--  <a href="https://gitlab.com/pages/plain-html/">Repository</a>-->
+    <!--  <a href="https://gitlab.com/pages/">Other Examples</a>-->
+    <!--</div>-->
 
-    <h1>Hello World!</h1>
+    <!--<h1>Hello World!</h1>-->
 
-    <p>
-      This is a simple plain-HTML website on GitLab Pages, without any fancy static site generator.
-    </p>
+    <!--<p>-->
+    <!--  This is a simple plain-HTML website on GitLab Pages, without any fancy static site generator.-->
+    <!--</p>-->
+    
+    <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8">
+    	<label for="name">Name</label><br/>
+    	<input type="text" name="name" id="name"/>
+    	<br/>
+    	<label for="email">Email</label><br/>
+    	<input type="email" name="email" id="email"/><br/><div style="display:none;">
+    	<label for="hp">HP</label><br/>
+    	<input type="text" name="hp" id="hp"/>
+    	</div>
+    	<input type="hidden" name="list" value="uWOyKOaTVyAT4NBIAt8s3A"/>
+    	<input type="hidden" name="subform" value="yes"/>
+    	<input type="submit" name="submit" id="submit"/>
+    </form>
+    
   </body>
 </html>
 
