@@ -129,14 +129,16 @@ body {
 }
 
 .register_block p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
 input[type=email] {
     width: 80%;
     padding: 12px 20px;
-    margin-right: 1rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    margin-right:1rem;
     background-color: #fff;
     border: 2px solid #d6c0a9;
     border-radius: 10px;
@@ -144,6 +146,7 @@ input[type=email] {
 
 input[type=submit] {
     margin-top:1rem;
+    margin-bottom:1rem;
     padding: 12px 20px;
     background-color: #d6c0a9;
     border: 2px solid #d6c0a9;
