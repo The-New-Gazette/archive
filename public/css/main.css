@@ -170,6 +170,36 @@ input[type=submit] {
                                 supported by Chrome, Opera and Firefox */
 }
 
+.about_article section {
+    padding-bottom:1rem;
+}
+
+.about_article h2 {
+    font-weight: normal;
+}
+
+.about_article img {
+    height: 50%;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: invert(20%) sepia(14%) saturate(880%) hue-rotate(153deg) brightness(100%) contrast(85%); /* https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.success_block {
+    background-color: #f7f3ef;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 2rem auto;
+}
+
+.success_block h2 {
+    color:#005377;
+    margin: 0;
+    font-weight: bold;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
