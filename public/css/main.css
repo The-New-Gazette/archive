@@ -151,6 +151,10 @@ body {
     padding: 10px;
 }
 
+.product h2 {
+    color:#005377;
+}
+
 .product_1 {
     margin-right: 2%;
     float:left;
@@ -164,6 +168,11 @@ body {
 .cost {
     color:#06A77D;
     margin:2rem 0 0 0;
+}
+
+.cost_byline {
+    font-size: 14px;
+    color: #8a8a8a;
 }
 
 input[type=email] {
