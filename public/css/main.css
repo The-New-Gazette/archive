@@ -184,7 +184,6 @@ input[type=submit] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    filter: invert(20%) sepia(14%) saturate(880%) hue-rotate(153deg) brightness(100%) contrast(85%); /* https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
 .success_block {
@@ -203,6 +202,15 @@ input[type=submit] {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+@media only screen and (max-width: 480px){
+
+    .title {
+        font-size:2.1em;
+        line-height:120%;
+    }
+
+}
 
 @media only screen and (min-width: 480px) {
 
