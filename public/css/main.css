@@ -103,7 +103,7 @@ body {
     font-size:2.7em;
     letter-spacing:0.15rem;
     font-weight:700;
-    text-shadow: 1px 1px 0px #ffffff";
+    text-shadow: 1px 1px 0px #ffffff;
 }
 
 .title a {
@@ -136,6 +136,34 @@ body {
 .register_block p {
     margin-bottom: 1.5rem;
     text-align: center;
+}
+
+.product_block {
+    margin-top: 3rem;
+    display:flex;
+}
+
+.product {
+    flex:1;
+    border-radius: 10px;
+    width:45%;
+    background-color: #f7f3ef;
+    padding: 10px;
+}
+
+.product_1 {
+    margin-right: 2%;
+    float:left;
+}
+
+.product_2 {
+    margin-left: 2%;
+    float:right;
+}
+
+.cost {
+    color:#06A77D;
+    margin:2rem 0 0 0;
 }
 
 input[type=email] {
@@ -197,6 +225,12 @@ input[type=submit] {
     color:#005377;
     margin: 0;
     font-weight: bold;
+}
+
+.footer_text {
+    line-height: 2.5;
+    font-size: 14px;
+    color: #8a8a8a;
 }
 
 /* ==========================================================================
