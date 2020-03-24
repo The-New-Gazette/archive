@@ -121,7 +121,7 @@ body {
 }
 
 .register_block {
-    background-color: #f7f3ef;
+    background-color: #eee;
     border-radius: 10px;
     padding: 30px 40px;
     margin-top: 3rem;
@@ -147,7 +147,7 @@ body {
     flex:1;
     border-radius: 10px;
     width:45%;
-    background-color: #f7f3ef;
+    background-color: #eee;
     padding: 10px;
 }
 
@@ -176,23 +176,22 @@ body {
 }
 
 input[type=email] {
-    width: 80%;
     padding: 12px 20px;
     margin-top:1rem;
     margin-bottom:1rem;
-    margin-right:1rem;
     background-color: #fff;
-    border: 2px solid #d6c0a9;
+    border: 2px solid #06A77D;
     border-radius: 10px;
+    width: 80%;
   }
 
 input[type=submit] {
     margin-top:1rem;
     margin-bottom:1rem;
     padding: 12px 20px;
-    background-color: #d6c0a9;
-    border: 2px solid #d6c0a9;
-    color: #005377;
+    background-color: #06A77D;
+    border: 2px solid #06A77D;
+    color: #fff;
     font-weight: bold;
     border-radius: 10px;
   }
@@ -236,11 +235,54 @@ input[type=submit] {
     font-weight: bold;
 }
 
-.footer_text {
+.footer_text, .footer_text a {
     line-height: 2.5;
     font-size: 14px;
     color: #8a8a8a;
 }
+
+.footer_bar {
+    margin: 0 5px;
+}
+
+/* help.html -- Accordion */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-top: 1rem;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
 
 /* ==========================================================================
    Media Queries

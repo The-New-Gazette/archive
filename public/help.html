@@ -19,9 +19,9 @@
         <meta name="description" content="Curated local news, presented clearly and succintly, in one daily email."></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
 
         <link rel="stylesheet" href="css/normalize.min.css">
@@ -46,42 +46,27 @@
 
                 <article class="about_article">
                     <section>
-                        <h2>Mission</h2>
+                        <h2>Having Trouble?</h2>
                         <p>
-                            Our mission is to make local news better...
+                            We are here to help. We've put together some common questions below. If you're still having trouble, feel free to email us at <a href="mailto:editor@newgazette.co">editor@newgazette.co</a>.
                         </p>
                     </section>
                     <section>
-                        <h2>Vision</h2>
-                        <p>
-                            Where we are going...
-                        </p>
+                        <button class="accordion">Section 1</button>
+                        <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion">Section 2</button>
+                        <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion">Section 3</button>
+                        <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
                     </section>
-                    <section>
-                        <h2>Process</h2>
-                        <p>
-                            How we do it...
-                        </p>
-                    </section>
-                    <section>
-                        <h2>Story</h2>
-                        <p>
-                            Where we started and who...
-                        </p>
-                    </section>
-                    <section>
-                        <h2>Data Commitment</h2>
-                        <p>
-                            We will not share or sell your email to any third party organization. Additionally, we do not handle or interact with any of your credit card or financial data.  
-                            You trust us with your information, and we take that responsiblity seriously. 
-                        </p>
-                    </section>
-                    <section>
-                        <h2>Contact</h2>
-                        <p>
-                            text
-                        </p>
-                    </section>                 
                 </article>
 
             </div> <!-- #main -->
@@ -109,5 +94,24 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+
+        <!-- Accordion -->
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+
     </body>
 </html>

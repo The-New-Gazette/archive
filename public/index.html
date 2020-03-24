@@ -19,9 +19,9 @@
         <meta name="description" content="Curated local news, presented clearly and succintly, in one daily email."></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
 
         <link rel="stylesheet" href="css/normalize.min.css">
@@ -90,17 +90,19 @@
                                 If you're interested, please join the waitlist.
                             </p>
                             <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="center">
-                                <div style="display:inline-block;">
-                                <input type="email" name="email" id="email" placeholder="Email Address"/>
-                                    <div style="display:none;">
-                                        <label for="hp">HP</label><br/>
-                                        <input type="text" name="hp" id="hp"/>
+                                <div style="display:flex; margin:0 1rem;">
+                                    <div style="flex:3;">
+                                        <input type="email" name="email" id="email" placeholder="Email Address"/>
+                                        <div style="display:none;">
+                                            <label for="hp">HP</label><br/>
+                                            <input type="text" name="hp" id="hp"/>
+                                        </div>
                                     </div>
-                                </div>
-                                <div style="display:inline-block;">
-                                    <input type="hidden" name="list" value="uWOyKOaTVyAT4NBIAt8s3A"/>
-                                    <input type="hidden" name="subform" value="yes"/>
-                                    <input type="submit" name="submit" id="submit"/>
+                                    <div style="flex:1;">
+                                        <input type="hidden" name="list" value="uWOyKOaTVyAT4NBIAt8s3A"/>
+                                        <input type="hidden" name="subform" value="yes"/>
+                                        <input type="submit" name="submit" id="submit"/>
+                                    </div>
                                 </div>
                                 <div style="display: inline-block;" class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
                             </form>
@@ -114,7 +116,7 @@
         <div class="footer-container">
             <footer class="wrapper center">
                 <p class="footer_text">
-                    &copy; The New Gazette, 2020
+                    &copy; The New Gazette, 2020 <span class="footer_bar">&#124;</span> <a href="about.html">About</a> <span class="footer_bar">&#124;</span> <a href="help.html">Help</a>
                 </p>
             </footer>
         </div>
