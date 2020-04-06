@@ -97,6 +97,7 @@ body {
    Author's custom styles
    ========================================================================== */
 
+/* index.html */ 
 .title {
     font-family: 'Merriweather', serif;
     color:#005377;
@@ -118,6 +119,15 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+    }
 
 .byline {
     color: #40ae80;
@@ -245,17 +255,15 @@ button:disabled, button[disabled]{
 
 input[type=email] {
     padding: 12px 20px;
-    margin-top:1rem;
-    margin-bottom:1rem;
+    margin:1rem 0;
     background-color: #fff;
     border: 2px solid #40ae80;
     border-radius: 10px;
-    width: 80%;
+    width: 84%;
   }
 
 input[type=submit] {
-    margin-top:1rem;
-    margin-bottom:1rem;
+    margin:1rem 0;
     padding: 12px 20px;
     background-color: #40ae80;
     border: 2px solid #40ae80;
@@ -263,16 +271,6 @@ input[type=submit] {
     font-weight: bold;
     border-radius: 10px;
   }
-
-.noselect {
--webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome, Opera and Firefox */
-}
 
 .about_article section {
     padding-bottom:1rem;
@@ -357,6 +355,14 @@ input[type=submit] {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+@media only screen and (max-width: 320px){
+
+    .flex_item_email {
+        width: 100%;
+    }
+
+}
 
 @media only screen and (max-width: 480px){
 
