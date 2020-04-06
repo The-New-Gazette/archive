@@ -127,7 +127,16 @@ body {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
-    }
+}
+
+ul {
+    padding-left: 12.5%;
+    padding-right: 10%;
+}
+
+li {
+    padding-top:5px;
+}
 
 .byline {
     color: #40ae80;
@@ -156,15 +165,6 @@ body {
     text-align: center;
     padding-left: 7%;
     padding-right: 7%;
-}
-
-.register_block ul li {
-    padding-top:5px;
-}
-
-.register_block ul {
-    padding-left: 13%;
-    padding-right: 10%;
 }
 
 .product_block {
@@ -349,8 +349,6 @@ input[type=submit] {
   .active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
-
-
 
 /* ==========================================================================
    Media Queries
