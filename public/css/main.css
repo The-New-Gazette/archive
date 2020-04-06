@@ -264,12 +264,14 @@ input[type=email] {
 
 input[type=submit] {
     margin:1rem 0;
-    padding: 12px 20px;
+    padding: 5px 10px;
     background-color: #40ae80;
     border: 2px solid #40ae80;
     color: #fff;
     font-weight: bold;
     border-radius: 10px;
+    letter-spacing: 0.075em;
+    outline:none;
   }
 
 .about_article section {
