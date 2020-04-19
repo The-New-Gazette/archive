@@ -1,4 +1,5 @@
-<!doctype html>
+<!doctype html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:fb="http://ogp.me/ns/fb#">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -16,8 +17,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>The New Gazette</title>
-        <meta name="description" content="Curated local news, presented clearly and succinctly, in one daily email."></meta>
+        <meta name="description" content="Curated local news, presented clearly and succinctly, in one email three days a week."></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="https://newgazette.co/img/logo2.png" />
         
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -28,6 +30,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -35,19 +38,30 @@
         <![endif]-->
 
         <div class="header-container">
-            <header class="wrapper clearfix center">
-                <h1 class="title noselect"><a href="https://newgazette.co">The New Gazette</a></h1>
+            <header class="wrapper clearfix center" style="display:block;">
+                <a href="https://newgazette.co">
+                    <img src="img/logo2.png" alt="New Gazette Logo" class="logo">
+                </a>
             </header>
         </div>
 
         <div class="main-container">
             <div class="main wrapper clearfix">
 
-                <article class="about_article center">
+                <article>
+                    <header>
+                        <h2 class="byline center">Local news as it should be. Simple.</h2>
+                    </header>
+                    <br>
                     <section>
-                        <h1>404</h1>
-                        <p>Sorry, but the page you were trying to view does not exist.</p>
-                    </section>                
+                        <div class="center">
+                            <p style="text-align: justify; text-justify: inter-word;">
+                                <h1>404</h1>
+                                <p>
+                                    Nothing newsworthy here. Let's try again from the <a href="https://newgazette.co">top</a>.</p>
+                                </p>
+                        </div>
+                    </section>
                 </article>
 
             </div> <!-- #main -->
@@ -55,10 +69,26 @@
 
         <div class="footer-container">
             <footer class="wrapper center">
+                <a href="https://newgazette.co">
+                    <img src="img/edit.png" style="display: block; margin:auto; margin-bottom:10px;" width="50" border="0">
+                </a>
                 <p class="footer_text">
-                    &copy; The New Gazette, 2020 <span class="footer_bar">&#124;</span> <a href="about.html">About</a> <span class="footer_bar">&#124;</span> <a href="help.html">Help</a>
+                    <strong>&copy; The New Gazette, 2020</strong>
+                    <span style="display:block;"><a href="about.html">About</a> <span class="footer_bar">&#124;</span> <a href="help.html">Help</a></span>
                 </p>
             </footer>
         </div>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-161218704-1','auto');ga('send','pageview');
+        </script>
     </body>
 </html>
