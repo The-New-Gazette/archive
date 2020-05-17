@@ -1,27 +1,21 @@
 <div id="paypal-button-container"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AevKp6R9BJj_o7bNP9jbB8ZqqCB4wHxWqWpZDQ2L4Gw-pV18SWQXfysPSZeb03fD9VP43gr-e0QEWzYt&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AevKp6R9BJj_o7bNP9jbB8ZqqCB4wHxWqWpZDQ2L4Gw-pV18SWQXfysPSZeb03fD9VP43gr-e0QEWzYt&vault=true" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
       style: {
           shape: 'rect',
           color: 'silver',
           layout: 'vertical',
-          label: 'pay',
+          label: 'subscribe',
           
       },
-      createOrder: function(data, actions) {
-          return actions.order.create({
-              purchase_units: [{
-                  amount: {
-                      value: '1'
-                  }
-              }]
-          });
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          'plan_id': 'P-7EN91372UH372031YL3AKZDA'
+        });
       },
       onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-              alert('Transaction completed by ' + details.payer.name.given_name + '!');
-          });
+        alert(data.subscriptionID);
       }
   }).render('#paypal-button-container');
 </script>
