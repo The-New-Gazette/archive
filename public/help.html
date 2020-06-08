@@ -17,9 +17,9 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>The New Gazette</title>
-        <meta name="description" content="Curated local news, presented clearly and succinctly, in one email three days a week."></meta>
+        <meta name="description" content="Curated local news, presented clearly and succinctly, emailed three days a week."></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="https://newgazette.co/img/logo2.png" />
+        <meta property="og:image" content="https://newgazette.co/img/logo_bg.png" />
         
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -28,9 +28,14 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/how.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -38,9 +43,9 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <![endif]-->
 
         <div class="header-container">
-            <header class="wrapper clearfix center" style="display:block;">
+            <header class="wrapper clearfix center">
                 <a href="https://newgazette.co">
-                    <img src="img/logo2.png" alt="New Gazette Logo" class="logo">
+                    <img src="img/logo_new.svg" alt="The New Gazette" class="logo" style="display:block;">
                 </a>
             </header>
         </div>
@@ -48,27 +53,28 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <div class="main-container">
             <div class="main wrapper clearfix">
 
-                <article class="about_article">
-                    <header>
-                        <h2 class="byline center">Local news as it should be. Simple.</h2>
-                    </header>
-                    <section>
+                <article>
+                    <section class="section_block">
+                        <h2 class="byline center" style="color:#162F34;">Having Trouble?</h2>
                         <p>
-                            If you are having trouble with our service we are here to help. We've put together some common questions below. If you're still having trouble, feel free to email us at <a href="mailto:editor@newgazette.co">editor@newgazette.co</a>.
+                            We are here to help! We've put together some common questions below if you are having trouble with our service.
+                        </p>
+                        <p>
+                            If these don't help, please email us at <a href="mailto:editor@newgazette.co">editor@newgazette.co</a> or you can <a href="https://twitter.com/thenewgazette">tweet us</a>. Either way we will try to respond promptly.
                         </p>
                     </section>
                     <section>
-                        <button class="accordion">Section 1</button>
+                        <button class="accordion">TBD - Subscribing / Unsubscribing</button>
                         <div class="panel">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-
-                        <button class="accordion">Section 2</button>
+                    
+                        <button class="accordion">TBD - Billing</button>
                         <div class="panel">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-
-                        <button class="accordion">Section 3</button>
+                    
+                        <button class="accordion">TBD - Other</button>
                         <div class="panel">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
@@ -80,13 +86,19 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <div class="footer-container">
             <footer class="wrapper center">
-                <a href="https://newgazette.co">
-                    <img src="img/edit.png" style="display: block; margin:auto; margin-bottom:10px;" width="50" border="0">
+                <a href="https://newgazette.co" target="_blank" >
+                    <img src="img/teardrop.svg" style="display: block; margin:auto; margin-bottom:16px;" width="40">
                 </a>
-                <p class="footer_text">
-                    <strong>&copy; The New Gazette, 2020</strong>
-                    <span style="display:block;"><a href="about.html">About</a> <span class="footer_bar">&#124;</span> <a href="help.html">Help</a></span>
-                </p>
+                <div class="footer_text">
+                    <div style="margin:0; padding:0; line-height:1.5; padding-bottom: 16px;">
+                        &copy; The New Gazette, 2020 <br> All rights reserved.
+                    </div>
+                    <div style="display:block;">
+                        <a href="about.html">About</a> 
+                        <span class="footer_bar">&#124;</span>
+                        <a href="help.html">Help</a>
+                    </div>
+                </div>
             </footer>
         </div>
 

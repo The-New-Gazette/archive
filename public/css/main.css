@@ -312,20 +312,20 @@ input[type=submit] {
 }
 
 .success_block {
-    background-color: #f7f3ef;
-    border-radius: 10px;
+    border-radius: 3px;
     padding: 25px 20px;
-    margin: 2rem auto;
+    margin: 2rem auto 0 auto;
     width: 90%;
 }
 
 .success_block h2 {
-    color:#0d9bc1;
+    color:#b19c76;
     margin: 0;
     font-weight: bold;
 }
 
 .success_block img {
+    border: 1px solid #b19c76;
     width: 100%;
     height: auto;
     margin: auto;
@@ -393,8 +393,8 @@ input[type=submit] {
 
 /* help.html -- Accordion */
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: #b19c76;
+    color: #162F34;
     cursor: pointer;
     padding: 18px;
     width: 100%;
