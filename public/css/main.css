@@ -1,4 +1,6 @@
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+/*! HTML5 Boilerplate v5.0 | MIT License | https://html5boilerplate.com/ -- https://github.com/h5bp/html5-boilerplate */
+
+/* DOC: https://github.com/h5bp/main.css/blob/master/README.md#features */
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
@@ -6,6 +8,7 @@ html {
     color: #373D3F;
     font-size: 1em;
     line-height: 1.4;
+    background-color: #f4ede2;
 }
 
 ::-moz-selection {
@@ -59,12 +62,13 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font: 16px/26px 'Open Sans', sans-serif;
 }
 
 .wrapper {
     width: 90%;
     margin: 0 5%;
+    border: 0px solid red;
 }
 
 
@@ -73,7 +77,7 @@ body {
    ============== */
 
 .main {
-    padding: 30px 0;
+    padding: 32px 0;
 }
 
 .main article h1 {
@@ -114,8 +118,7 @@ body {
 
 .logo {
     width: 75% !important;
-    max-width: 400px !important;
-    padding-left:6% !important;
+    max-width: 275px !important;
     margin-left: auto;
     margin-right: auto;
 }
@@ -130,22 +133,40 @@ body {
 }
 
 ul {
+    list-style: none;
+    margin-left: 0;
     padding-left: 12.5%;
     padding-right: 10%;
+    text-indent: -1em;
 }
 
 li {
     padding-top:5px;
 }
 
+.plus {
+    color: #b19c76;
+    font-weight: bold;
+    padding-right:8px;
+    font-size: 20px;
+}
+
 .byline {
-    color: #40ae80;
+    color: #162F34;
+    font-family: 'Playfair Display';
+    font-style: normal;
     font-weight: normal;
+    font-size: 32px;
+    line-height: 43px;
+    margin: 0;
+    margin-bottom: 24px;
 }
 
 .header-container {
-    margin-top: 3rem;
+    padding-top: 3rem;
 }
+
+
 
 .register_block {
     background-color: #eee;
@@ -194,7 +215,7 @@ li {
     float:right;
 }
 
-button {
+/* button {
     margin-top:1rem;
     margin-bottom:1rem;
     padding: 5px 10px;
@@ -222,7 +243,7 @@ button:disabled, button[disabled]{
     border: 2px solid #999999;
     background-color: #cccccc;
     color: #666666;
-  }
+  } */
 
 .cost {
     color:#40ae80;
@@ -253,7 +274,7 @@ button:disabled, button[disabled]{
     width:100%;
 }
 
-input[type=email] {
+/* input[type=email] {
     padding: 12px 20px;
     margin:1rem 0;
     background-color: #fff;
@@ -272,7 +293,7 @@ input[type=submit] {
     border-radius: 10px;
     letter-spacing: 0.075em;
     outline:none;
-  }
+  } */
 
 .about_article section {
     padding-bottom:1rem;
@@ -310,14 +331,64 @@ input[type=submit] {
     margin: auto;
 }
 
-.footer_text, .footer_text a {
+.footer_text {
     line-height: 2.5;
+    font-size: 12px;
+    color: #162f34;
+}
+
+.footer_text a {
     font-size: 14px;
-    color: #373D3F;
+    color: #162f34;
 }
 
 .footer_bar {
     margin: 0 5px;
+    color: #b19c76;
+}
+
+/* Sections */
+
+.section_block {
+    margin: 0 5%;
+}
+
+.pitch_block {
+    margin: 0 4rem;
+}
+
+.pitch_block p {
+    line-height: 24px;
+    font-size: 16px;
+    color: #162F34;
+    font-family: 'Open Sans';
+}
+
+.pitch_form {
+    margin: 24px 4rem;
+}
+
+.cost_block {
+    margin: 0;
+    margin-top:72px;
+    background-color:#162F34;
+    padding:24px 45px 28px 45px;
+    border-radius: 3px;
+}
+
+.testimonial_block {
+    margin-top:72px;
+}
+
+.good_news_block {
+    margin: 72px 4rem 0 4rem;
+}
+
+.footer_block {
+    background-color:#162F34;
+    color:#F4EDE2;
+    padding:24px 45px;
+    border-radius: 3px;
 }
 
 /* help.html -- Accordion */
@@ -406,6 +477,29 @@ input[type=submit] {
     .register_block ul {
         padding-left: 17%;
         padding-right: 10%;
+    }
+
+    .pitch_form, .pitch_block {
+        margin: 24px 5%;
+    }
+
+    .good_news_block, .testimonial_block {
+        margin: 72px 5%;
+    }
+
+    .cost_block, .footer_block {
+        border-radius: 0;
+        padding:24px 5%;
+    }
+
+
+    .arrow {
+        display: none;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 0;
     }
 }
 
@@ -577,3 +671,4 @@ input[type=submit] {
         page-break-after: avoid;
     }
 }
+

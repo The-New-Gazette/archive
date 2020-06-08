@@ -19,7 +19,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <title>The New Gazette</title>
         <meta name="description" content="Curated local news, presented clearly and succinctly, in one email three days a week."></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="https://newgazette.co/img/logo2.png" />
+        <meta property="og:image" content="https://newgazette.co/img/logo_bg.png" />
         
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -28,6 +28,11 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/how.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -39,7 +44,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <div class="header-container">
             <header class="wrapper clearfix center">
-                <img src="img/logo2.png" alt="New Gazette Logo" class="logo" style="display:block;">
+                <img src="img/logo_new.svg" alt="The New Gazette" class="logo" style="display:block;">
             </header>
         </div>
 
@@ -47,79 +52,118 @@ xmlns:fb="http://ogp.me/ns/fb#">
             <div class="main wrapper clearfix">
 
                 <article>
-                    <header>
-                        <h2 class="byline center">Local news as it should be. Simple.</h2>
-                        <p style="text-align: justify; text-justify: inter-word;">
-                            We are bringing a new approach to local news. Curated three days a week and presented clearly and succinctly. 
-                            We stick to the facts and always link to our sources. Say goodbye to sensational headlines, subtle bias, and distracting ads.
+                    <section class="section_block pitch_block">
+                        <h2 class="byline center">Get the local news you need, minus the junk.</h2>
+                        <p>
+                            We are bringing a new approach to local news with curated news summaries delivered three days a week presented clearly and succinctly. We stick to the facts and always link to our sources. Say goodbye to sensational headlines, subtle bias, and distracting ads.
                         </p>
-                    </header>
-                    <section>
-                        <div class="product_block center">
-                            <!-- <div class="product product_1">
-                                <h2>Community</h2>
-                                <p>
-                                    Curated local news summary sent by email once a month.
-                                </p>
-                                <h1 class="cost">FREE</h1>
-                                <span class="cost_byline">Because we love our city</span>
-                                <ul style="text-align: left;">
-                                    <li>End of the month delivery</li>
-                                    <li>Locally sponsored</li>
-                                </ul>
-                            </div> -->
-                            <div class="product product_2" style="position: relative;">
-                                <h2>Insider Membership</h2>
-                                <p>
-                                   A curated local news summary sent by email three days a week.
-                                </p>
-                                <h1 class="cost">$5</h1>
-                                <span class="cost_byline">per month</span>
-                                <ul style="text-align: left;">
-                                    <li>Delivered each Monday, Wednesday, and Friday</li>
-                                    <li>Spotlight of new events and openings locally</li>
-                                    <li>Special discounts for New Gazette Insiders</li>
-                                </ul>
-                                    <button disabled><!-- Become an Insider -->Coming Soon</button>
+                        <p>
+                            <span style="display:block; margin:32px 0 8px 0; font-weight: bold;">Help us test by joining the free Insider beta.</span>
+                            <span style="font-size: 13px; line-height: 20px; font-style: italic;">The New Gazette Insider Membership will cost $5 per month when we launch later this summer.</span>
+                        </p>
+                    </section>
+
+                    <div class="pitch_form">
+                        <div class="form_flex_container">
+                            <div class="form_flex_item center">
+                                <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
+                            </div>
+                            <div class="form_flex_item center">
+                                <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="flex-form" style="margin-top:18px;">
+                                    <input type="email" name="email" id="email" placeholder="name@email.com">
+                                    <div style="display:none;">
+                                        <label for="hp">HP</label><br/>
+                                        <input type="text" name="hp" id="hp"/>
+                                    </div>
+                                    <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
+                                    <input type="hidden" name="subform" value="yes"/>
+                                    <button type="submit" name="submit" id="submit">Sign Up <img src="./img/button_arrow.svg" class="arrow" style="padding-left:8px;"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section style="margin-top:72px;">
+                        <h2 class="byline center">How it Works</h2>
+                        <div class="how_block">
+                            <div class="how_block_child">
+                                <img src="img/news.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:15px;">
+                                Our local writers collect the most important and relevant news from credible local sources.
+                            </div>
+                            <div class="how_block_child">
+                                <img src="img/award.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
+                                We summarize each curated story into a simple and concise summary you can read in less than 10 seconds.
+                            </div>
+                            <div class="how_block_child">
+                                <img src="img/paper-plane.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
+                                The curated news hits your inbox in the morning three days a week.
                             </div>
                         </div>
                     </section>
-                    <section>
-                        <div class="register_block center">
-                            <h2>Here's some good news!</h2>
-                            <p>
-                                The <span style="background-color:#D6F0E5; padding-right:2px; padding-left:2px; font-weight: bold;">Insider BETA</span> is open for <strong>Huntsville, AL</strong>.
-                            </p>
-                            <p style="text-align:justify; text-justify: inter-word;">
-                                The news is overwhelming right now. So, we have decided to open up our Insider BETA to all of our neighbors for <strong>FREE</strong> as we continue testing.
-                            </p>
-                            <p>
-                                <ul style="text-align:left;">
-                                    <li>No cost during testing</li>
-                                    <li>We will ask for specific feedback in the email</li>
-                                    <li>The testing phase will last until early June 2020</li>
-                                    <li>The newsletter will be sent 1-3 times a week during testing instead of every weekday</li>
-                                </ul>
-                            </p>
-                            <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8">
-                                <div class="form_flex_container">
-                                    <div class="form_flex_item flex_item_email">
-                                        <input type="email" name="email" id="email" placeholder="Email Address"/>
-                                        <div style="display:none;">
-                                            <label for="hp">HP</label><br/>
-                                            <input type="text" name="hp" id="hp"/>
-                                        </div>
+
+                    <section class="section_block cost_block">
+                        <h2 class="byline center" style="color:#F4EDE2;">Insider Membership</h2>
+                        <hr>
+                        <div style="margin-top:32px" class="center">
+                            <span class="byline center" style="color:#F4EDE2; font-size: 3rem;">$</span>
+                            <span class="byline center" style="color:#F4EDE2; font-size: 8rem;">5</span>
+                            <span class="byline center" style="color:#F4EDE2; font-size: 1.8rem; display:block; margin-top: 20px;">per month</span>
+                        </div>
+                        <form class="member-button center">
+                            <button type="submit" disabled>Coming Soon</button>
+                          </form>
+                    </section>
+
+                    <section class="good_news_block">
+                        <img src="img/smile.svg" style="display:block; margin:auto; margin-bottom:24px;">
+                        <h2 class="byline center">Here's Some Good News</h2>
+                        <p>
+                            The news is overwhelming right now. So, we have opened up our Insider BETA to all of our Huntsville neighbors for FREE as we continue testing.
+                            <ul>
+                                <li><strong class="plus">+</strong> No cost during testing</li>
+                                <li><strong class="plus">+</strong> We ask for specific feedback in the email</li>
+                                <li><strong class="plus">+</strong> The new summary is sent 3 days week</li>
+                            </ul>
+                        </p>
+                    </section>
+
+                    <section class="testimonial_block">
+                        <h2 class="byline center">What Our Readers are Saying</h2>
+                        <div class="how_block">
+                            <div class="how_block_child">
+                                <span style="font-size: 18px; display:block; margin-bottom:8px;">"A cool quote goes in this box here."</span>
+                                <span style="font-style: italic; font-size:13px;">- Name <br> Huntsville</span>
+                            </div>
+                            <div class="how_block_child">
+                                <span style="font-size: 18px; display:block; margin-bottom:8px;">"A cool quote goes in this box here."</span>
+                                <span style="font-style: italic; font-size:13px;">- Name <br> Huntsville</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section style="margin-top:72px;">
+                        <img src="img/mockup.svg" style="display:block; margin:auto;">
+                    </section>
+
+                    <section class="footer_block">
+                        <h2 class="byline center" style="color:#F4EDE2;">Join the beta</h2>
+                        <span style="font-size: 13px; line-height: 20px; font-style: italic;">The New Gazette Insider Membership will cost $5 per month when we launch later this summer.</span>
+                        <div class="form_flex_container" style="margin:24px 0;">
+                            <div class="form_flex_item center">
+                                <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
+                            </div>
+                            <div class="form_flex_item center">
+                                <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="footer-form" style="margin-top:24px;">
+                                    <input type="email" name="email" id="email" placeholder="name@email.com">
+                                    <div style="display:none;">
+                                        <label for="hp">HP</label><br/>
+                                        <input type="text" name="hp" id="hp"/>
                                     </div>
-                                    <div class="form_flex_item">
-                                        <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
-                                    </div>
-                                    <div class="form_flex_item">
-                                        <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
-                                        <input type="hidden" name="subform" value="yes"/>
-                                        <input type="submit" name="submit" id="submit"/>
-                                    </div>
-                                </div>
-                            </form>
+                                    <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
+                                    <input type="hidden" name="subform" value="yes"/>
+                                    <button type="submit" name="submit" id="submit">Sign Up <img src="./img/button_arrow_dark.svg" class="arrow" style="padding-left:8px;"></button>
+                                  </form>
+                            </div>
                         </div>
                     </section>
                 </article>
@@ -130,12 +174,18 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <div class="footer-container">
             <footer class="wrapper center">
                 <a href="https://newgazette.co" target="_blank" >
-                    <img src="img/edit.png" style="display: block; margin:auto; margin-bottom:10px;" width="50" border="0">
+                    <img src="img/teardrop.svg" style="display: block; margin:auto; margin-bottom:16px;" width="40">
                 </a>
-                <p class="footer_text">
-                    <strong>&copy; The New Gazette, 2020</strong>
-                    <span style="display:block;"><a href="about.html">About</a> <span class="footer_bar">&#124;</span> <a href="help.html">Help</a></span>
-                </p>
+                <div class="footer_text">
+                    <div style="margin:0; padding:0; line-height:1.5; padding-bottom: 16px;">
+                        &copy; The New Gazette, 2020 <br> All rights reserved.
+                    </div>
+                    <div style="display:block;">
+                        <a href="about.html">About</a> 
+                        <span class="footer_bar">&#124;</span>
+                        <a href="help.html">Help</a>
+                    </div>
+                </div>
             </footer>
         </div>
 

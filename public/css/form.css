@@ -1,0 +1,120 @@
+  /* Pitch Button */
+  .flex-form button[type="submit"] {
+    background: #162F34;
+    border: 1px solid #162F34;
+    color: #fff;
+    padding: 0 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    line-height: 22px;
+    white-space:nowrap;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .flex-form button[type="submit"]:hover {
+    background: #224850;
+    border: 1px solid #162F34;
+  }
+  
+  .flex-form {
+    display: -webkit-box;
+    display: flex;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .flex-form > * {
+    border: 0;
+    padding: 0 0 0 10px;
+    background: #fff;
+    line-height: 50px;
+    font-size: 1rem;
+    border-radius: 3px 0 0 3px;
+    outline: 0;
+    -webkit-appearance: none;
+  }
+  
+  .flex-form input[type="email"] {
+    flex-basis: 100%;
+    border: 1px solid #162F34;
+  }
+
+  /* Footer button */
+  .footer-form button[type="submit"] {
+    background: #f4ede2;
+    color: #162F34;
+    padding: 0 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    line-height: 22px;
+    white-space:nowrap;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .footer-form button[type="submit"]:hover {
+    background: #b19c76;
+  }
+  
+  .footer-form {
+    display: -webkit-box;
+    display: flex;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer-form > * {
+    border: 0;
+    padding: 0 0 0 10px;
+    background: #fff;
+    line-height: 50px;
+    font-size: 1rem;
+    border-radius: 3px 0 0 3px;
+    outline: 0;
+    -webkit-appearance: none;
+  }
+  
+  .footer-form input[type="email"] {
+    flex-basis: 100%;
+  }
+
+  /* Membership Button */
+  .member-button button[type="submit"] {
+    background: #f4ede2;
+    border: 1px solid #162F34;
+    color: #162F34;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    line-height: 50px;
+    white-space:nowrap;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    font: 'Open Sans';
+    padding: 0px 32px;
+    border-radius: 3px;
+  }
+
+  .member-button button[type="submit"]:hover {
+    background: #b19c76;
+  }
+
+  .member-button {
+    display: block;
+    z-index: 10;
+    margin-top:32px;
+  }
+
+  @media only screen and (max-width: 480px){
+
+
+
+  }
