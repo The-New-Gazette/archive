@@ -82,6 +82,37 @@ xmlns:fb="http://ogp.me/ns/fb#">
                     </div>
                 </div>
 
+                <br>
+                <p>
+                    url params:
+                    <br>
+                    <script>
+                        getParams(window.location.href);
+                    </script>
+                </p>
+
+                <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8">
+                    <label for="name">Name</label><br/>
+                    <input type="text" name="name" id="name"/>
+                    <br/>
+                    <label for="email">Email</label><br/>
+                    <input type="email" name="email" id="email"/>
+                    <br/>
+                    <label for="Insider">Insider</label><br/>
+                    <input type="text" name="Insider" id="Insider"/>
+                    <br/>
+                    <label for="referred">referred</label><br/>
+                    <input type="text" name="referred" id="referred"/><br/><div style="display:none;">
+                    <label for="hp">HP</label><br/>
+                    <input type="text" name="hp" id="hp"/>
+                    </div>
+                    <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
+                    <input type="hidden" name="subform" value="yes"/>
+                    <input type="submit" name="submit" id="submit"/>
+                </form>
+
+
+
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
