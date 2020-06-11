@@ -82,7 +82,8 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                 <div style="display:none;">
                                     <label for="hp">HP</label><br/>
                                     <input type="text" name="hp" id="hp"/>
-                                    <input type="text" name="referred" id="referred"/>
+                                    <input type="text" name="referrer_uuid" id="referrer_uuid"/>
+                                    <input type="text" name="uuid" id="uuid"/>
                                 </div>
                                 <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
                                 <input type="hidden" name="subform" value="yes"/>
@@ -93,22 +94,9 @@ xmlns:fb="http://ogp.me/ns/fb#">
                 </div>
 
                 <script type="text/javascript">
-                    // Retrieve and set referrer email value 
-                    uuid = getQueryVariable("u");
-                    document.getElementById("referred").value = uuid;
-
-                    // Retrieve and set the admirer user
-                    // admirer = email.split('@');
-                    // document.getElementById("admirer").innerHTML = ", with the username <strong>" + admirer[0] + "</strong>,";
-
-                    // Strip email from url params
-                    // window.onload=function(){
-                    //     const state = { 'email': email };
-                    //     const title = '';
-                    //     const url = 'referral.html';
-
-                    //     history.pushState(state, title, url);
-                    // }
+                    // Retrieve and set referrer uuid and new user uuid values 
+                    document.getElementById("referrer_uuid").value = getQueryVariable("u");
+                    document.getElementById("uuid").innerHTML = create_UUID();
                 </script>
 
 
