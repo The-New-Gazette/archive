@@ -93,11 +93,17 @@ xmlns:fb="http://ogp.me/ns/fb#">
                     </div>
                 </div>
 
+                <div class="center"><h2 id="uuid1">hello</h2></div>
+
                 <script type="text/javascript">
                     // Retrieve and set referrer uuid and new user uuid values 
                     document.getElementById("referrer_uuid").value = getQueryVariable("u");
-                    document.getElementById("uuid").innerHTML = create_UUID();
+                                      
+                    const uuid = create_UUID();
+                    document.getElementById("uuid").innerHTML = uuid;
+                    document.getElementById("uuid1").innerHTML = uuid;
                 </script>
+
 
 
             </div> <!-- #main -->
