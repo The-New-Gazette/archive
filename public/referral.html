@@ -62,7 +62,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <p>
                             Curated local news sent to you in a brief email three days a week. That's it. Stay informed without the junk.   
                         </p>
-                        <p>One of our readers <span id="admirer"></span> has invited you to join <em>The New Gazette</em> for <strong>free</strong> during the BETA.</p>
+                        <p>One of our readers <!--<span id="admirer"></span>--> has invited you to join <em>The New Gazette</em> for <strong>free</strong> during the BETA.</p>
                         <ul>
                             <li><strong class="plus">+</strong> No cost during testing</li>
                             <li><strong class="plus">+</strong> We ask for specific feedback in the email</li>
@@ -92,45 +92,23 @@ xmlns:fb="http://ogp.me/ns/fb#">
                     </div>
                 </div>
 
-                <!-- <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8">
-                    <label for="name">Name</label><br/>
-                    <input type="text" name="name" id="name"/>
-                    <br/>
-                    <label for="email">Email</label><br/>
-                    <input type="email" name="email" id="email"/>
-                    <br/>
-                    <label for="Insider">Insider</label><br/>
-                    <input type="text" name="Insider" id="Insider"/>
-                    <br/>
-                    <label for="referred">referrer</label><br/>
-                    <input type="text" name="referred" id="referred"/>
-                    <br/>
-                    <div style="display:none;">
-                    <label for="hp">HP</label><br/>
-                    <input type="text" name="hp" id="hp"/>
-                    </div>
-                    <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
-                    <input type="hidden" name="subform" value="yes"/>
-                    <input type="submit" name="submit" id="submit"/>
-                </form> -->
-
                 <script type="text/javascript">
                     // Retrieve and set referrer email value 
-                    email = getQueryVariable("email");
-                    document.getElementById("referred").value = email;
+                    uuid = getQueryVariable("uuid");
+                    document.getElementById("referred").value = uuid;
 
                     // Retrieve and set the admirer user
-                    admirer = email.split('@');
-                    document.getElementById("admirer").innerHTML = ", with the username <strong>" + admirer[0] + "</strong>,";
+                    // admirer = email.split('@');
+                    // document.getElementById("admirer").innerHTML = ", with the username <strong>" + admirer[0] + "</strong>,";
 
                     // Strip email from url params
-                    window.onload=function(){
-                        const state = { 'email': email };
-                        const title = '';
-                        const url = 'referral.html';
+                    // window.onload=function(){
+                    //     const state = { 'email': email };
+                    //     const title = '';
+                    //     const url = 'referral.html';
 
-                        history.pushState(state, title, url);
-                    }
+                    //     history.pushState(state, title, url);
+                    // }
                 </script>
 
 
