@@ -74,6 +74,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                     <div style="display:none;">
                                         <label for="hp">HP</label><br/>
                                         <input type="text" name="hp" id="hp"/>
+                                        <input type="text" name="uuid" id="uuid_top"/>
                                     </div>
                                     <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
                                     <input type="hidden" name="subform" value="yes"/>
@@ -158,6 +159,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                     <div style="display:none;">
                                         <label for="hp">HP</label><br/>
                                         <input type="text" name="hp" id="hp"/>
+                                        <input type="text" name="uuid" id="uuid_bottom"/>
                                     </div>
                                     <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
                                     <input type="hidden" name="subform" value="yes"/>
@@ -200,5 +202,13 @@ xmlns:fb="http://ogp.me/ns/fb#">
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-161218704-1','auto');ga('send','pageview');
         </script>
+
+        <script type="text/javascript">
+            // Set and new user uuid values
+            const uuid = create_UUID();
+            document.getElementById("uuid_top").value = uuid;
+            document.getElementById("uuid_bottom").value = uuid;
+        </script>
+
     </body>
 </html>

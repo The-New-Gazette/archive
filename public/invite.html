@@ -35,7 +35,6 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        <script src="js/main.js"></script>
         <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     </head>
     <body>
@@ -45,9 +44,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <div class="header-container">
             <header class="wrapper clearfix center">
-                <a href="https://newgazette.co">
-                    <img src="img/logo_new.svg" alt="The New Gazette" class="logo" style="display:block;">
-                </a>
+                <img src="img/logo_new.svg" alt="The New Gazette" class="logo" style="display:block;">
             </header>
         </div>
 
@@ -55,51 +52,58 @@ xmlns:fb="http://ogp.me/ns/fb#">
             <div class="main wrapper clearfix">
 
                 <article>
-                    <section class="section_block">
-                        <h2 class="byline center" style="color:#162F34;">You're Invited!</h2>
-                        
-
+                    <section class="section_block pitch_block">
+                        <h2 class="byline center">Get the local news you need, minus the junk.</h2>
                         <p>
-                            Curated local news sent to you in a brief email three days a week. That's it. Stay informed without the junk.   
+                            We bring a new approach to local news with curated summaries delivered three days a week. We stick to the facts and always link to our sources. Say goodbye to sensational headlines, subtle bias, and distracting ads.
                         </p>
-                        <p>One of our readers <!--<span id="admirer"></span>--> has invited you to join <em>The New Gazette</em> for <strong>free</strong> during the BETA.</p>
-                        <ul>
-                            <li><strong class="plus">+</strong> No cost during testing</li>
-                            <li><strong class="plus">+</strong> We ask for specific feedback in the email</li>
-                            <li><strong class="plus">+</strong> You help shape the future of the product</li>
-                        </ul>
+                        <p>
+                            <span style="display:block; margin:32px 0 8px 0; font-weight: bold;">Help us test by joining the free Insider beta.</span>
+                            <span style="font-size: 13px; line-height: 20px; font-style: italic;">The New Gazette Insider Membership will cost $5 per month when we launch later this summer.</span>
+                        </p>
                     </section>
-                </article>
 
-                <div class="pitch_form">
-                    <div class="form_flex_container">
-                        <!-- <div class="form_flex_item center">
-                            <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
-                        </div> -->
-                        <div class="form_flex_item center" style="width:100%; max-width:450px;">
-                            <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="flex-form" style="margin-top:18px;">
-                                <input type="email" name="email" id="email" placeholder="name@email.com">
-                                <div>
-                                    <label for="hp">HP</label><br/>
-                                    <input type="text" name="hp" id="hp"/>
-                                    <input type="text" name="referrer_uuid" id="referrer_uuid"/>
-                                    <input type="text" name="uuid" id="uuid"/>
-                                </div>
-                                <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
-                                <input type="hidden" name="subform" value="yes"/>
-                                <button type="submit" name="submit" id="submit">Sign Up Now<img src="./img/button_arrow.svg" class="arrow" style="padding-left:8px;"></button>
-                            </form>
+                    <div class="pitch_form">
+                        <div class="form_flex_container">
+                            <!-- <div class="form_flex_item center">
+                                <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
+                            </div> -->
+                            <div class="form_flex_item center" style="width:100%;">
+                                <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="flex-form" style="margin-top:18px;">
+                                    <input type="email" name="email" id="email" placeholder="name@email.com">
+                                    <div style="display:none;">
+                                        <label for="hp">HP</label><br/>
+                                        <input type="text" name="hp" id="hp"/>
+                                        <input type="text" name="uuid" id="uuid"/>
+                                        <input type="text" name="referrer_uuid" id="referrer_uuid"/>
+                                    </div>
+                                    <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
+                                    <input type="hidden" name="subform" value="yes"/>
+                                    <button type="submit" name="submit" id="submit">Sign Up Now <img src="./img/button_arrow.svg" class="arrow" style="padding-left:8px;"></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <script type="text/javascript">
-                    // Retrieve and set referrer uuid and new user uuid values 
-                    document.getElementById("referrer_uuid").value = getQueryVariable("u");
-                    document.getElementById("uuid").value = create_UUID();
-                </script>
+                    <section style="margin-top:72px;">
+                        <h2 class="byline center">How it Works</h2>
+                        <div class="how_block">
+                            <div class="how_block_child">
+                                <img src="img/news.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:15px;">
+                                Our local editors collect the most important and relevant news from credible local sources.
+                            </div>
+                            <div class="how_block_child">
+                                <img src="img/award.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
+                                We summarize each curated story into a simple and concise summary you can read in less than 10 seconds.
+                            </div>
+                            <div class="how_block_child">
+                                <img src="img/paper-plane.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
+                                The curated news hits your inbox in the morning three days a week.
+                            </div>
+                        </div>
+                    </section>
 
-
+                </article>
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
@@ -122,6 +126,8 @@ xmlns:fb="http://ogp.me/ns/fb#">
             </footer>
         </div>
 
+        <script src="js/main.js"></script>
+
         <!-- Google Analytics -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -131,5 +137,12 @@ xmlns:fb="http://ogp.me/ns/fb#">
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-161218704-1','auto');ga('send','pageview');
         </script>
+
+        <script type="text/javascript">
+            // Set and new user uuid values
+            document.getElementById("referrer_uuid").value = getQueryVariable("u");
+            document.getElementById("uuid").value = create_UUID();
+        </script>
+
     </body>
 </html>
