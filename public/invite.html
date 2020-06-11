@@ -79,7 +79,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <div class="form_flex_item center" style="width:100%; max-width:450px;">
                             <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="flex-form" style="margin-top:18px;">
                                 <input type="email" name="email" id="email" placeholder="name@email.com">
-                                <div style="display:none;">
+                                <div>
                                     <label for="hp">HP</label><br/>
                                     <input type="text" name="hp" id="hp"/>
                                     <input type="text" name="referrer_uuid" id="referrer_uuid"/>
@@ -93,15 +93,10 @@ xmlns:fb="http://ogp.me/ns/fb#">
                     </div>
                 </div>
 
-                <div class="center"><h2 id="uuid1">hello</h2></div>
-
                 <script type="text/javascript">
                     // Retrieve and set referrer uuid and new user uuid values 
                     document.getElementById("referrer_uuid").value = getQueryVariable("u");
-                                      
-                    const uuid = create_UUID();
-                    document.getElementById("uuid").innerHTML = uuid;
-                    document.getElementById("uuid1").innerHTML = uuid;
+                    document.getElementById("uuid").value = create_UUID();
                 </script>
 
 
