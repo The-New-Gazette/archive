@@ -35,6 +35,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
         <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     </head>
     <body>
@@ -56,28 +57,42 @@ xmlns:fb="http://ogp.me/ns/fb#">
                 <article>
                     <section class="section_block">
                         <h2 class="byline center" style="color:#162F34;">Payment Test</h2>
-                        <div id="paypal-button-container"></div>
-                        <script src="https://www.paypal.com/sdk/js?client-id=AevKp6R9BJj_o7bNP9jbB8ZqqCB4wHxWqWpZDQ2L4Gw-pV18SWQXfysPSZeb03fD9VP43gr-e0QEWzYt&vault=true" data-sdk-integration-source="button-factory"></script>
+ 
+                        <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                        <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em" id="checkout-button-price_1GwuJDHZTUfzXfXGzgeOA7BX" role="link">Checkout</button>
+                        <div id="error-message"></div>
+
                         <script>
-                          paypal.Buttons({
-                              style: {
-                                  shape: 'rect',
-                                  color: 'silver',
-                                  layout: 'vertical',
-                                  label: 'subscribe',
-                                  
-                              },
-                              createSubscription: function(data, actions) {
-                                return actions.subscription.create({
-                                  'plan_id': 'P-7EN91372UH372031YL3AKZDA'
-                                });
-                              },
-                              onApprove: function(data, actions) {
-                                alert(data.subscriptionID);
-                              }
-                          }).render('#paypal-button-container');
+                        (function() {
+                        var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
+
+                        var checkoutButton = document.getElementById('checkout-button-price_1GwuJDHZTUfzXfXGzgeOA7BX');
+                        checkoutButton.addEventListener('click', function () {
+                        // When the customer clicks on the button, redirect
+                        // them to Checkout.
+                        stripe.redirectToCheckout({
+                            lineItems: [{price: 'price_1GwuJDHZTUfzXfXGzgeOA7BX', quantity: 1}],
+                            mode: 'subscription',
+                            // Do not rely on the redirect to the successUrl for fulfilling
+                            // purchases, customers may not always reach the success_url after
+                            // a successful payment.
+                            // Instead use one of the strategies described in
+                            // https://stripe.com/docs/payments/checkout/fulfillment
+                            successUrl: 'https://newgazette.co/success-hsv.html',
+                            cancelUrl: 'https://newgazette.co/',
+                        })
+                        .then(function (result) {
+                            if (result.error) {
+                            // If `redirectToCheckout` fails due to a browser or network
+                            // error, display the localized error message to your customer.
+                            var displayError = document.getElementById('error-message');
+                            displayError.textContent = result.error.message;
+                            }
+                        });
+                        });
+                        })();
                         </script>
-                    </section>
+
                 </article>
 
             </div> <!-- #main -->
