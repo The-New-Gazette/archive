@@ -80,6 +80,10 @@ xmlns:fb="http://ogp.me/ns/fb#">
                             // https://stripe.com/docs/payments/checkout/fulfillment
                             successUrl: 'https://newgazette.co/success-hsv.html',
                             cancelUrl: 'https://newgazette.co/',
+                            metadata: {
+                                uuid : 123,
+                                referrer_uuid : 321,
+                            }
                         })
                         .then(function (result) {
                             if (result.error) {
