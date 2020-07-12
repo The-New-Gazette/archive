@@ -115,6 +115,23 @@
   margin-top:32px;
 }
 
-  /* @media only screen and (max-width: 480px){
+/* Floating Subscribe */
+.floating-subscribe button{
+  font-size:1rem;
+  background: #162F34;
+  border: 1px solid #162F34;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  line-height: 22px;
+  white-space:nowrap;
+  border-radius: 3px;
+}
 
-  } */
+.floating-subscribe button:hover {
+  background: #224850;
+  border: 1px solid #162F34;
+}
