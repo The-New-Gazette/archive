@@ -118,7 +118,7 @@
 /* Floating Subscribe */
 .floating-subscribe button{
   font-size:1rem;
-  background: #162F34;
+  background: #224850;
   border: 1px solid #162F34;
   color: #fff;
   padding: 20px;
@@ -132,7 +132,7 @@
 }
 
 .floating-subscribe button:hover {
-  background: #224850;
+  background: #162F34;
   border: 1px solid #162F34;
 }
 
