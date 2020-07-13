@@ -70,16 +70,16 @@ xmlns:fb="http://ogp.me/ns/fb#">
                             </div> -->
                             <div class="form_flex_item center floating-subscribe" style="width:100%;">
                                 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                                <button id="checkout-button-price_1GwuJDHZTUfzXfXGzgeOA7BX" role="link"><strong>SUBSCRIBE NOW</strong> <span style="font-size: 13px; line-height: 20px; font-style: italic;">(20% discount)</span></button>
+                                <button id="checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd" role="link"><strong>SUBSCRIBE NOW</strong> <span style="font-size: 13px; line-height: 20px; font-style: italic;">(20% discount)</span></button>
                                 <div id="error-message"></div>
                                 <script>
                                     (function() {
-                                        var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
+                                        var stripe = Stripe('pk_live_zfgsI9EIiuSyXarhxxEaFuUQ00ClMitWig');
 
-                                        var checkoutButton = document.getElementById('checkout-button-price_1GwuJDHZTUfzXfXGzgeOA7BX');
+                                        var checkoutButton = document.getElementById('checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd');
                                         checkoutButton.addEventListener('click', function () {
                                             stripe.redirectToCheckout({
-                                                lineItems: [{price: 'price_1GwuJDHZTUfzXfXGzgeOA7BX', quantity: 1}],
+                                                lineItems: [{price: 'price_1H4JSAHZTUfzXfXG5JeVfFZd', quantity: 1}],
                                                 mode: 'subscription',
                                                 successUrl: 'https://newgazette.co/success-hsv.html',
                                                 cancelUrl: 'https://newgazette.co/',

@@ -35,6 +35,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
         <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     </head>
     <body>
@@ -57,10 +58,10 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <p>
                             We bring a new approach to local news with curated summaries delivered three days a week. We stick to the facts and always link to our sources. Say goodbye to sensational headlines, subtle bias, and distracting ads.
                         </p>
-                        <p>
-                            <span style="display:block; margin:32px 0 8px 0; font-weight: bold;">Help us test by joining the free Insider beta.</span>
-                            <span style="font-size: 13px; line-height: 20px; font-style: italic;">The New Gazette Insider Membership will cost $5 per month when we launch later this summer.</span>
+                        <p class="center" style="color: #FD6222; font-size:1.5rem;">
+                            <strong>Launching August 3rd.</strong>
                         </p>
+                        <br>
                     </section>
 
                     <div class="pitch_form">
@@ -68,18 +69,31 @@ xmlns:fb="http://ogp.me/ns/fb#">
                             <!-- <div class="form_flex_item center">
                                 <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
                             </div> -->
-                            <div class="form_flex_item center" style="width:100%;">
-                                <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="flex-form" style="margin-top:18px;">
-                                    <input type="email" name="email" id="email" placeholder="name@email.com">
-                                    <div style="display:none;">
-                                        <label for="hp">HP</label><br/>
-                                        <input type="text" name="hp" id="hp"/>
-                                        <input type="text" name="uuid" id="uuid_top"/>
-                                    </div>
-                                    <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
-                                    <input type="hidden" name="subform" value="yes"/>
-                                    <button type="submit" name="submit" id="submit">Sign Up <img src="./img/button_arrow.svg" class="arrow" style="padding-left:8px;"></button>
-                                </form>
+                            <div class="form_flex_item center floating-subscribe" style="width:100%;">
+                                <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                                <button id="checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd" role="link"><strong>Subscribe Now <span style="font-size: 13px; line-height: 20px; font-style: italic; font-weight:normal;">(pre-launch)</span></strong></button>
+                                <div id="error-message"></div>
+                                <script>
+                                    (function() {
+                                        var stripe = Stripe('pk_live_zfgsI9EIiuSyXarhxxEaFuUQ00ClMitWig');
+
+                                        var checkoutButton = document.getElementById('checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd');
+                                        checkoutButton.addEventListener('click', function () {
+                                            stripe.redirectToCheckout({
+                                                lineItems: [{price: 'price_1H4JSAHZTUfzXfXG5JeVfFZd', quantity: 1}],
+                                                mode: 'subscription',
+                                                successUrl: 'https://newgazette.co/success-hsv.html',
+                                                cancelUrl: 'https://newgazette.co/',
+                                            })
+                                            .then(function (result) {
+                                                if (result.error) {
+                                                    var displayError = document.getElementById('error-message');
+                                                    displayError.textContent = result.error.message;
+                                                }
+                                            });
+                                        });
+                                    })();
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -110,20 +124,48 @@ xmlns:fb="http://ogp.me/ns/fb#">
                             <span class="byline center" style="color:#F4EDE2; font-size: 8rem;">5</span>
                             <span class="byline center" style="color:#F4EDE2; font-size: 1.8rem; display:block; margin-top: 20px;">per month</span>
                         </div>
-                        <form class="member-button center">
-                            <button type="submit" disabled>Coming Soon</button>
-                          </form>
+                          <div class="pitch_form">
+                            <div class="form_flex_container">
+                                <!-- <div class="form_flex_item center">
+                                    <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
+                                </div> -->
+                                <div class="form_flex_item center floating-subscribe-tan" style="width:100%;">
+                                    <button id="checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd-2" role="link"><strong>Subscribe Now <span style="font-size: 13px; line-height: 20px; font-style: italic; font-weight:normal;">(pre-launch)</span></strong></button>
+                                    <div id="error-message"></div>
+                                    <script>
+                                        (function() {
+                                            var stripe = Stripe('pk_live_zfgsI9EIiuSyXarhxxEaFuUQ00ClMitWig');
+    
+                                            var checkoutButton = document.getElementById('checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd-2');
+                                            checkoutButton.addEventListener('click', function () {
+                                                stripe.redirectToCheckout({
+                                                    lineItems: [{price: 'price_1H4JSAHZTUfzXfXG5JeVfFZd', quantity: 1}],
+                                                    mode: 'subscription',
+                                                    successUrl: 'https://newgazette.co/success-hsv.html',
+                                                    cancelUrl: 'https://newgazette.co/',
+                                                })
+                                                .then(function (result) {
+                                                    if (result.error) {
+                                                        var displayError = document.getElementById('error-message');
+                                                        displayError.textContent = result.error.message;
+                                                    }
+                                                });
+                                            });
+                                        })();
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
                     </section>
 
                     <section class="good_news_block">
                         <img src="img/smile.svg" style="display:block; margin:auto; margin-bottom:24px;">
                         <h2 class="byline center">Here's Some Good News</h2>
                         <p>
-                            The news is overwhelming right now. So, we have opened up our Insider BETA to all of our Huntsville neighbors for FREE as we continue testing.
                             <ul>
-                                <li><strong class="plus">+</strong> No cost during testing</li>
-                                <li><strong class="plus">+</strong> We ask for specific feedback in the email</li>
-                                <li><strong class="plus">+</strong> You help shape the future of the product</li>
+                                <li><strong class="plus">+</strong> Try it out for 2 weeks for free</li>
+                                <li><strong class="plus">+</strong> Delivered Mon, Wed, and Fri mornings</li>
+                                <li><strong class="plus">+</strong> Curated news will begin on Aug. 3rd</li>
                             </ul>
                         </p>
                     </section>
@@ -146,25 +188,44 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <img src="img/mockup.svg" style="display:block; margin:auto;">
                     </section>
 
-                    <section class="footer_block">
-                        <h2 class="byline center" style="color:#F4EDE2;">Join the beta</h2>
-                        <span style="font-size: 13px; line-height: 20px; font-style: italic;">The New Gazette Insider Membership will cost $5 per month when we launch later this summer.</span>
+                    <section class="footer_block center">
+                        <h2 class="byline" style="color:#F4EDE2;">Skip the junk</h2>
+                        <span style="font-size: 15px; line-height: 20px; font-style: italic;">Don't let the local news get you down, or slow you down.</span>
                         <div class="form_flex_container" style="margin:24px 0;">
                             <!-- <div class="form_flex_item center">
                                 <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
                             </div> -->
-                            <div class="form_flex_item center" style="width:100%;">
-                                <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="footer-form" style="margin-top:24px;">
-                                    <input type="email" name="email" id="email" placeholder="name@email.com">
-                                    <div style="display:none;">
-                                        <label for="hp">HP</label><br/>
-                                        <input type="text" name="hp" id="hp"/>
-                                        <input type="text" name="uuid" id="uuid_bottom"/>
+                            <div class="pitch_form">
+                                <div class="form_flex_container">
+                                    <!-- <div class="form_flex_item center">
+                                        <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
+                                    </div> -->
+                                    <div class="form_flex_item center floating-subscribe-tan" style="width:100%;">
+                                        <button id="checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd-3" role="link"><strong>Subscribe Now <span style="font-size: 13px; line-height: 20px; font-style: italic; font-weight:normal;">(pre-launch)</span></strong></button>
+                                        <div id="error-message"></div>
+                                        <script>
+                                            (function() {
+                                                var stripe = Stripe('pk_live_zfgsI9EIiuSyXarhxxEaFuUQ00ClMitWig');
+        
+                                                var checkoutButton = document.getElementById('checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd-3');
+                                                checkoutButton.addEventListener('click', function () {
+                                                    stripe.redirectToCheckout({
+                                                        lineItems: [{price: 'price_1H4JSAHZTUfzXfXG5JeVfFZd', quantity: 1}],
+                                                        mode: 'subscription',
+                                                        successUrl: 'https://newgazette.co/success-hsv.html',
+                                                        cancelUrl: 'https://newgazette.co/',
+                                                    })
+                                                    .then(function (result) {
+                                                        if (result.error) {
+                                                            var displayError = document.getElementById('error-message');
+                                                            displayError.textContent = result.error.message;
+                                                        }
+                                                    });
+                                                });
+                                            })();
+                                        </script>
                                     </div>
-                                    <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
-                                    <input type="hidden" name="subform" value="yes"/>
-                                    <button type="submit" name="submit" id="submit">Sign Up <img src="./img/button_arrow_dark.svg" class="arrow" style="padding-left:8px;"></button>
-                                  </form>
+                                </div>
                             </div>
                         </div>
                     </section>
