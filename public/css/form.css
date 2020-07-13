@@ -140,6 +140,16 @@
   background: #f4ede2;
   color: #162F34;
   box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+  font-size:1rem;
+  border: 1px solid #162F34;
+  padding: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  line-height: 22px;
+  white-space:nowrap;
+  border-radius: 3px;
 }
 
 .floating-subscribe-tan button:hover {
