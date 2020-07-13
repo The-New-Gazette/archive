@@ -59,23 +59,59 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <button onclick="getAction()">Trigger API - GET</button>
                         <pre id="json"></pre>
 
+                        <h3>Authors</h3>
+                        <ul id="authors"></ul>
+
                         <script>
                             const getAction = async () => {
-                                const response = await fetch("https://postman-echo.com/get?foo1=bar1&foo2=bar2", {
-                                    "method": "GET",
-                                    "headers": {
-                                        "cookie": "sails.sid=s%253At3yxg7zxilSaF_pV2hguMxN8Pdum91Wg.0yAPwi58o%252BUNgvQlAEfMPX%252FrITeFSU8xIN5x2xX70hE"
-                                    }
+
+                                // function createNode(element) {
+                                //     return document.createElement(element);
+                                // }
+
+                                // function append(parent, el) {
+                                //     return parent.appendChild(el);
+                                // }
+
+                                // const ul = document.getElementById('authors');
+                                // const url = 'https://randomuser.me/api/?results=3';
+                                // fetch(url)
+                                // .then((resp) => resp.json())
+                                // .then(function(data) {
+                                //     let authors = data.results;
+                                //     console.log(authors);
+                                //     return authors.map(function(author) {
+                                //     let li = createNode('li'),
+                                //         img = createNode('img'),
+                                //         span = createNode('span');
+                                //     img.src = author.picture.medium;
+                                //     span.innerHTML = `${author.name.first} ${author.name.last}`;
+                                //     append(li, img);
+                                //     append(ul, li);
+                                //     })
+                                // })
+                                // .catch(function(error) {
+                                //     console.log(error);
+                                // });   
+
+                                fetch("https://1grsbk4l4k.execute-api.us-east-1.amazonaws.com/stripe_session", {
+                                  "method": "GET",
+                                  "mode": "no-cors",
+                                  "headers": {}
                                 })
                                 .then(response => {
-                                    console.log(response);
+                                  console.log(response);
                                 })
+                                // .then((resp) => resp.json())
+                                // .then(function(data) {
+                                //     let hello = data.results;
+                                //     console.log(hello);
+                                //     //document.getElementById("json").textContent = JSON.stringify(hello, undefined, 2);
+                                // })
                                 .catch(err => {
-                                    console.error(err);
-                                });
+                                  console.error(err);
+                                }); 
                               
-                                const myJson = await response.json();
-                                document.getElementById("json").textContent = JSON.stringify(myJson, undefined, 2);
                             }
                         </script>
                     
