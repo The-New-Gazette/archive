@@ -135,3 +135,13 @@
   background: #224850;
   border: 1px solid #162F34;
 }
+
+.floating-subscribe-tan button{
+  background: #f4ede2;
+  color: #162F34;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.floating-subscribe-tan button:hover {
+  background: #b19c76;
+}
