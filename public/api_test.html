@@ -1,0 +1,118 @@
+<!doctype html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:fb="http://ogp.me/ns/fb#">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161218704-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-161218704-1');
+        </script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The New Gazette</title>
+        <meta name="description" content="Curated and concise local news delivered to your inbox three days a week."></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="https://newgazette.co/img/logo_bg.png" />
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/how.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix center">
+                <a href="https://newgazette.co">
+                    <img src="img/logo_new.svg" alt="The New Gazette" class="logo" style="display:block;">
+                </a>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <section class="section_block">
+                        <h2 class="byline center" style="color:#162F34;">API Test</h2>
+                        <button onclick="getAction()">Trigger API - GET</button>
+                        <pre id="json"></pre>
+
+                        <script>
+                            const getAction = async () => {
+                                const response = await fetch("https://postman-echo.com/get?foo1=bar1&foo2=bar2", {
+                                    "method": "GET",
+                                    "headers": {
+                                        "cookie": "sails.sid=s%253At3yxg7zxilSaF_pV2hguMxN8Pdum91Wg.0yAPwi58o%252BUNgvQlAEfMPX%252FrITeFSU8xIN5x2xX70hE"
+                                    }
+                                })
+                                .then(response => {
+                                    console.log(response);
+                                })
+                                .catch(err => {
+                                    console.error(err);
+                                });
+                              
+                                const myJson = await response.json();
+                                document.getElementById("json").textContent = JSON.stringify(myJson, undefined, 2);
+                            }
+                        </script>
+                    
+                    </section>
+                </article>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper center">
+                <a href="https://newgazette.co" target="_blank" >
+                    <img src="img/teardrop.svg" style="display: block; margin:auto; margin-bottom:16px;" width="40">
+                </a>
+                <div class="footer_text">
+                    <div style="margin:0; padding:0; line-height:1.5; padding-bottom: 16px;">
+                        &copy; The New Gazette, 2020 <br> All rights reserved.
+                    </div>
+                    <div style="display:block;">
+                        <a href="about.html">About</a> 
+                        <span class="footer_bar">&#124;</span>
+                        <a href="help.html">Help</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-161218704-1','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
