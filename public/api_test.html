@@ -63,9 +63,10 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                 xhttp.onreadystatechange = function() {
                                     if (this.readyState == 4 && this.status == 200) {
                                         var response = JSON.parse(this.responseText);
-                                        document.getElementById("myDiv").innerHTML = response;
                                         console.log(response);
                                         console.log(response.url);
+                                        window.location.href = "${response.url}";
+                                        // Need to handle a webhook incase someone cancels from this UI
                                     }
                                 };
                                 xhttp.open("GET", "https://1grsbk4l4k.execute-api.us-east-1.amazonaws.com/stripe_session", true);
@@ -74,7 +75,6 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         </script>
                     
                     <button onclick="callAwsLambdaFunction()">Manage Subscription</button><br>
-                    <h4><div id="myDiv"></div></h4>
 
                     </section>
                 </article>
