@@ -65,8 +65,8 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                         var response = this.responseText;
                                         document.getElementById("myDiv").innerHTML = response;
                                         console.log(response);
-                                        // var session_id = this.responseText.url;
-                                        // console.log(session_id);
+                                        var session_url = response.url;
+                                        console.log(session_url);
                                     }
                                 };
                                 xhttp.open("GET", "https://1grsbk4l4k.execute-api.us-east-1.amazonaws.com/stripe_session", true);
