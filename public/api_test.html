@@ -62,10 +62,11 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                 var xhttp = new XMLHttpRequest();
                                 xhttp.onreadystatechange = function() {
                                     if (this.readyState == 4 && this.status == 200) {
-                                        console.log(this.responseText);
-                                        document.getElementById("myDiv").innerHTML = this.responseText;
-                                        var session_id = this.responseText.url;
-                                        console.log(session_id);
+                                        var response = this.responseText;
+                                        document.getElementById("myDiv").innerHTML = response;
+                                        console.log(response);
+                                        // var session_id = this.responseText.url;
+                                        // console.log(session_id);
                                     }
                                 };
                                 xhttp.open("GET", "https://1grsbk4l4k.execute-api.us-east-1.amazonaws.com/stripe_session", true);
@@ -73,8 +74,8 @@ xmlns:fb="http://ogp.me/ns/fb#">
                             }
                         </script>
                     
-                    <h3><div id="myDiv"></div></h3>
                     <button onclick="callAwsLambdaFunction()">Manage Subscription</button><br>
+                    <h4><div id="myDiv"></div></h4>
 
                     </section>
                 </article>
