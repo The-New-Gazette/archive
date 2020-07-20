@@ -65,7 +65,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                         var response = JSON.parse(this.responseText);
                                         console.log(response);
                                         console.log(response.url);
-                                        window.location.href = '${response.url}';
+                                        window.location.href = response.url;
                                         // Need to handle a webhook incase someone cancels from this UI
                                     }
                                 };
