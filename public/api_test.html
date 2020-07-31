@@ -67,6 +67,8 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                         console.log(response.url);
                                         window.location.href = response.url;
                                         // Need to handle a webhook incase someone cancels from this UI
+                                        // Need to handle processing the right customer_id. Pass in email from a form?
+                                        // Could I include a redirect in the lambda func and forward to stripe simply based off an API endpoint url?
                                     }
                                 };
                                 xhttp.open("GET", "https://1grsbk4l4k.execute-api.us-east-1.amazonaws.com/stripe_session", true);
