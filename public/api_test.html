@@ -62,11 +62,11 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                 var xhttp = new XMLHttpRequest();
                                 xhttp.onreadystatechange = function() {
                                     if (this.readyState == 4 && this.status == 200) {
-                                        //var response = JSON.parse(this.responseText);
-                                        var response = this.responseText;
+                                        var response = JSON.parse(this.responseText);
+                                        //var response = this.responseText;
                                         console.log(response);
-                                        console.log(response.url);
-                                        window.location.href = response.url;
+                                        //console.log(response.url);
+                                        //window.location.href = response.url;
                                         // Need to handle a webhook incase someone cancels from this UI
                                         // Need to handle processing the right customer_id. Pass in email from a form?
                                         // Could I include a redirect in the lambda func and forward to stripe simply based off an API endpoint url?
