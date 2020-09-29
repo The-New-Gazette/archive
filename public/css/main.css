@@ -147,8 +147,18 @@ li {
 .plus {
     color: #b19c76;
     font-weight: bold;
-    padding-right:8px;
     font-size: 20px;
+}
+
+.plus-green {
+    color: #162F34;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+li span {
+    position: relative;
+    left: 8px;
 }
 
 .byline {
@@ -372,7 +382,15 @@ input[type=submit] {
     margin: 0;
     margin-top:72px;
     background-color:#162F34;
-    padding:24px 45px 28px 45px;
+    padding:24px 36px 28px 36px;
+    border-radius: 3px;
+}
+
+.community_block {
+    margin: 0;
+    margin-top:72px;
+    background-color:#b19c76;
+    padding:24px 36px 28px 36px;
     border-radius: 3px;
 }
 
