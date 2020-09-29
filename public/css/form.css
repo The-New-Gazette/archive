@@ -155,3 +155,19 @@
 .floating-subscribe-tan button:hover {
   background: #b19c76;
 }
+
+/* Community Input */
+input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #224850;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f4ede2;
+}
+
+input[type=email]:focus {
+  outline-color: #224850;
+}
