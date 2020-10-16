@@ -505,7 +505,7 @@ input[type=submit] {
         margin: 72px 5%;
     }
 
-    .cost_block, .footer_block {
+    .cost_block, .footer_block, .community_block {
         border-radius: 0;
         padding:24px 5%;
     }
