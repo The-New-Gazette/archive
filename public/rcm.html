@@ -53,49 +53,34 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
                 <article>
                     <section class="section_block pitch_block">
-                        <h2 class="byline center">Get the local news you need, minus the junk.</h2>
+                        <h2 class="byline center">The local news you need — no more, no less.</h2>
                         <p>
-                            We bring a new approach to local news with curated summaries delivered three days a week. We stick to the facts and always link to our sources. Say goodbye to sensational headlines, subtle bias, and distracting ads.
+                            Try a straightforward approach to local Huntsville news, with curated summaries delivered by email three days a week. We stick to the facts and always link to our sources. You can say goodbye to biased reporting, sensational headlines, and distracting ads.
                         </p>
                         <p>
-                            Stripe <a href="https://stripe.com/docs/payments/checkout/client-subscription">Client-only integration</a>
-                        </p>
+                            Here's an <a href="https://sendy.newgazette.co/w/MdpkZxbQW763KMlEiimSVK1Q" target="_blank">example</a> of what you can expect to see.
+                        </p>                    
                     </section>
-
-                    <div class="pitch_form">
+                  
+                    <div class="pitch_form" style="margin-top:36px;">
                         <div class="form_flex_container">
                             <div class="form_flex_item center floating-subscribe" style="width:100%;">
-                                <button id="checkout-button-price_1IKwfiHZTUfzXfXGT5UetMg8" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start the 2 week free trial</p></button>
+                                <button id="checkout-button-1" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
                                 <div id="error-message"></div>
                                 <script>
                                     (function() {
                                       var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
                                     
-                                      var checkoutButton = document.getElementById('checkout-button-price_1IKwfiHZTUfzXfXGT5UetMg8');
+                                      var checkoutButton = document.getElementById('checkout-button-1');
                                       checkoutButton.addEventListener('click', function () {
-                                        /*
-                                         * When the customer clicks on the button, redirect
-                                         * them to Checkout.
-                                         */
                                         stripe.redirectToCheckout({
                                           lineItems: [{price: 'price_1IKwfiHZTUfzXfXGT5UetMg8', quantity: 1}],
                                           mode: 'subscription',
-                                          /*
-                                           * Do not rely on the redirect to the successUrl for fulfilling
-                                           * purchases, customers may not always reach the success_url after
-                                           * a successful payment.
-                                           * Instead use one of the strategies described in
-                                           * https://stripe.com/docs/payments/checkout/fulfill-orders
-                                           */
                                           successUrl: window.location.protocol + '//newgazette.co/success-hsv',
-                                          cancelUrl: window.location.protocol + '//newgazette.co/canceled',
+                                          cancelUrl: window.location.protocol + '//newgazette.co',
                                         })
                                         .then(function (result) {
                                           if (result.error) {
-                                            /*
-                                             * If `redirectToCheckout` fails due to a browser or network
-                                             * error, display the localized error message to your customer.
-                                             */
                                             var displayError = document.getElementById('error-message');
                                             displayError.textContent = result.error.message;
                                           }
@@ -107,22 +92,76 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         </div>
                     </div>
 
-                    <section style="margin-top:72px;">
+                    <section style="margin-top:65px;">
                         <h2 class="byline center">How it Works</h2>
                         <div class="how_block">
                             <div class="how_block_child">
                                 <img src="img/news.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:15px;">
-                                Our local editors collect the most important and relevant news from credible local sources.
+                                Our team of local wordsmiths curate the most important and relevant news from credible local sources.
                             </div>
                             <div class="how_block_child">
                                 <img src="img/award.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
-                                We summarize each curated story into a simple and concise summary you can read in less than 10 seconds.
+                                Each hand-selected story is condensed into a summary you can read in less than 10 seconds.
                             </div>
                             <div class="how_block_child">
                                 <img src="img/paper-plane.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
-                                The curated news hits your inbox in the morning three days a week.
+                                A collection of summarized news lands in your email inbox 3x a week. Skim it in 5 minutes or less.
                             </div>
                         </div>
+                    </section>
+
+                    <section class="section_block cost_block">
+                        <h2 class="byline center" style="color:#F4EDE2;">The Insider</h2>
+                        <p style="font-weight: bold; font-size:20px; text-align:center; color:#b19c76;">Huntsville - Madison Metro Area</p>
+                        <hr>
+                        <div style="margin-top:32px" class="center">
+                            <span class="byline center" style="color:#F4EDE2; font-size: 3rem;">$</span>
+                            <span class="byline center" style="color:#F4EDE2; font-size: 8rem;">5</span>
+                            <span class="byline center" style="color:#F4EDE2; font-size: 1.8rem; display:block; margin-top: 20px;">per month</span>
+                        </div>
+                          <div class="pitch_form">
+                            <div class="form_flex_container">
+                                <!-- <div class="form_flex_item center">
+                                    <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
+                                </div> -->
+                                <div class="form_flex_item center floating-subscribe-tan" style="width:100%;">
+                                    <button id="checkout-button-2" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
+                                    <div id="error-message"></div>
+                                    <script>
+                                        (function() {
+                                            var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
+    
+                                            var checkoutButton = document.getElementById('checkout-button-2');
+                                            checkoutButton.addEventListener('click', function () {
+                                                stripe.redirectToCheckout({
+                                                    lineItems: [{price: 'price_1IKwfiHZTUfzXfXGT5UetMg8', quantity: 1}],
+                                                    mode: 'subscription',
+                                                    successUrl: 'https://newgazette.co/success-hsv.html',
+                                                    cancelUrl: 'https://newgazette.co/',
+                                                })
+                                                .then(function (result) {
+                                                    if (result.error) {
+                                                        var displayError = document.getElementById('error-message');
+                                                        displayError.textContent = result.error.message;
+                                                    }
+                                                });
+                                            });
+                                        })();
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p>
+                            
+                            <ul style="color:#F4EDE2;">
+                                <li><strong class="plus">+</strong><span>Morning delivery on Mon, Wed, and Fri</span></li>
+                                <li><strong class="plus">+</strong><span>No ads or sponsored headlines</span></li>
+                                <li><strong class="plus">+</strong><span>Spotlights of new local favorites</span></li>
+                                <li><strong class="plus">+</strong><span>Special summaries of important events</span></li>
+                            </ul>
+                        </p>
+                        <a id="brief"></a>
                     </section>
 
                 </article>
