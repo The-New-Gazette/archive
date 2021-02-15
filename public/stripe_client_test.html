@@ -58,8 +58,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                             We bring a new approach to local news with curated summaries delivered three days a week. We stick to the facts and always link to our sources. Say goodbye to sensational headlines, subtle bias, and distracting ads.
                         </p>
                         <p>
-                            <span style="display:block; margin:32px 0 8px 0; font-weight: bold;">Help us test by joining the free Insider beta.</span>
-                            <span style="font-size: 13px; line-height: 20px; font-style: italic;">The New Gazette Insider Membership will cost $5 per month when we launch later this summer.</span>
+                            Stripe <a href="https://stripe.com/docs/payments/checkout/client-subscription">Client-only integration</a>
                         </p>
                     </section>
 
@@ -68,19 +67,31 @@ xmlns:fb="http://ogp.me/ns/fb#">
                             <!-- <div class="form_flex_item center">
                                 <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
                             </div> -->
-                            <div class="form_flex_item center" style="width:100%;">
-                                <!-- <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8" class="flex-form" style="margin-top:18px;">
-                                    <input type="email" name="email" id="email" placeholder="name@email.com">
-                                    <div style="display:none;">
-                                        <label for="hp">HP</label><br/>
-                                        <input type="text" name="hp" id="hp"/>
-                                        <input type="text" name="uuid" id="uuid"/>
-                                        <input type="text" name="referrer_uuid" id="referrer_uuid"/>
-                                    </div>
-                                    <input type="hidden" name="list" value="ZhHt1L58tYhmneLR8dxOmA"/>
-                                    <input type="hidden" name="subform" value="yes"/>
-                                    <button type="submit" name="submit" id="submit">Sign Up Now <img src="./img/button_arrow.svg" class="arrow" style="padding-left:8px;"></button>
-                                </form> -->
+                            <div class="form_flex_item center floating-subscribe" style="width:100%;">
+                                <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                                <button id="checkout-button" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start the 2 week free trial</p></button>
+                                <div id="error-message"></div>
+                                <script>
+                                    (function() {
+                                        var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
+
+                                        var checkoutButton = document.getElementById('checkout-button');
+                                        checkoutButton.addEventListener('click', function () {
+                                            stripe.redirectToCheckout({
+                                                lineItems: [{price: 'price_1IKwfiHZTUfzXfXGT5UetMg8', quantity: 1}],
+                                                mode: 'subscription',
+                                                successUrl: 'https://newgazette.co/success-hsv.html',
+                                                cancelUrl: 'https://newgazette.co/',
+                                            })
+                                            .then(function (result) {
+                                                if (result.error) {
+                                                    var displayError = document.getElementById('error-message');
+                                                    displayError.textContent = result.error.message;
+                                                }
+                                            });
+                                        });
+                                    })();
+                                </script>
                             </div>
                         </div>
                     </div>
