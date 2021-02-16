@@ -36,3 +36,31 @@ function create_UUID(){
     });
     return uuid;
 }
+
+
+// Check for value in multi-dimensional array
+function check(array, key, value) {
+    return array.some(object => object[key] === value);
+}
+
+// Retrieve price from partners and prices array
+// requires array in this format: {name: "partner", price: "stripe_price_id"}
+function find_price(array, query_param, default_price){
+    var p = getQueryVariable(query_param);
+    var price = default_price;
+    
+    // Check if param is empty or set
+    if(p != ""){
+
+        // Check if param "p" matches value in partner array
+        if(check(array, "name", p)){
+            var index = array.findIndex((item) => item.name === p);
+            var price = array[index].price;
+        } else {
+            
+            // Set default price so match is found
+            var price = default_price;
+        }
+    } 
+    return price;
+}

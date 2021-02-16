@@ -36,7 +36,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="https://js.stripe.com/v3/"></script>
-        <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+        <script src="js/main.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -56,7 +56,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                     <section class="section_block pitch_block">
                         <h2 class="byline center">The local news you need — no more, no less.</h2>
                         <p>
-                            We bring a new and simple approach to local Huntsville news with curated summaries delivered to your inbox three days a week. We stick to the facts and always link to our sources. Say goodbye to sensational headlines, subtle bias, and distracting ads.
+                            Try a straightforward approach to local Huntsville news, with curated summaries delivered by email three days a week. We stick to the facts and always link to our sources. You can say goodbye to biased reporting, sensational headlines, and distracting ads.
                         </p>
                         <p>
                             Here's an <a href="https://sendy.newgazette.co/w/MdpkZxbQW763KMlEiimSVK1Q" target="_blank">example</a> of what you can expect to see.
@@ -65,21 +65,22 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
                     <div class="pitch_form">
                         <div class="form_flex_container">
-                            <!-- <div class="form_flex_item center">
-                                <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
-                            </div> -->
                             <div class="form_flex_item center floating-subscribe" style="width:100%;">
-                                <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                                <button id="checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start the 2 week free trial</p></button>
+                                <button id="checkout-button-top" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
                                 <div id="error-message"></div>
                                 <script>
+
+                                    // Set partners and prices
+                                    var partner_list = [{name: "rcm", price: "price_1ILYOFHZTUfzXfXGZ1MMeryc"}];
+                                    var price_id = find_price(partner_list, "p", "price_1H4JSAHZTUfzXfXG5JeVfFZd");
+
                                     (function() {
                                         var stripe = Stripe('pk_live_zfgsI9EIiuSyXarhxxEaFuUQ00ClMitWig');
 
-                                        var checkoutButton = document.getElementById('checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd');
+                                        var checkoutButton = document.getElementById('checkout-button-top');
                                         checkoutButton.addEventListener('click', function () {
                                             stripe.redirectToCheckout({
-                                                lineItems: [{price: 'price_1H4JSAHZTUfzXfXG5JeVfFZd', quantity: 1}],
+                                                lineItems: [{price: price_id, quantity: 1}],
                                                 mode: 'subscription',
                                                 successUrl: 'https://newgazette.co/success-hsv.html',
                                                 cancelUrl: 'https://newgazette.co/',
@@ -102,15 +103,15 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <div class="how_block">
                             <div class="how_block_child">
                                 <img src="img/news.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:15px;">
-                                Our local wordsmiths collect and curate the most important and relevant news from credible local sources.
+                                Our team of local wordsmiths curate the most important and relevant news from credible local sources.
                             </div>
                             <div class="how_block_child">
                                 <img src="img/award.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
-                                Each hand-selected story is compressed into a concise summary you can read in less than 10 seconds.
+                                Each hand-selected story is condensed into a summary you can read in less than 10 seconds.
                             </div>
                             <div class="how_block_child">
                                 <img src="img/paper-plane.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
-                                A collection of summarized headlines lands in your inbox in the morning. Skim it in 5 minutes or less.
+                                A collection of summarized news lands in your email inbox 3x a week. Skim it in 5 minutes or less.
                             </div>
                         </div>
                     </section>
@@ -225,25 +226,19 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <h2 class="byline" style="color:#F4EDE2;">Stay informed. Stay engaged.</h2>
                         <span style="font-size: 15px; line-height: 20px; font-style: italic;">Don't let the local news slow you down, keep it brief so you can engage with what matters most.</span>
                         <div class="form_flex_container" style="margin:24px 0;">
-                            <!-- <div class="form_flex_item center">
-                                <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
-                            </div> -->
                             <div class="pitch_form">
                                 <div class="form_flex_container">
-                                    <!-- <div class="form_flex_item center">
-                                        <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
-                                    </div> -->
                                     <div class="form_flex_item center floating-subscribe-tan" style="width:100%;">
-                                        <button id="checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd-3" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start the 2 week free trial</p></button>
+                                        <button id="checkout-button-footer" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
                                         <div id="error-message"></div>
                                         <script>
                                             (function() {
                                                 var stripe = Stripe('pk_live_zfgsI9EIiuSyXarhxxEaFuUQ00ClMitWig');
         
-                                                var checkoutButton = document.getElementById('checkout-button-price_1H4JSAHZTUfzXfXG5JeVfFZd-3');
+                                                var checkoutButton = document.getElementById('checkout-button-footer');
                                                 checkoutButton.addEventListener('click', function () {
                                                     stripe.redirectToCheckout({
-                                                        lineItems: [{price: 'price_1H4JSAHZTUfzXfXG5JeVfFZd', quantity: 1}],
+                                                        lineItems: [{price: price_id, quantity: 1}],
                                                         mode: 'subscription',
                                                         successUrl: 'https://newgazette.co/success-hsv.html',
                                                         cancelUrl: 'https://newgazette.co/',
@@ -284,8 +279,6 @@ xmlns:fb="http://ogp.me/ns/fb#">
                 </div>
             </footer>
         </div>
-
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics -->
         <script>
