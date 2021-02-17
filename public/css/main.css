@@ -409,6 +409,14 @@ input[type=submit] {
     border-radius: 3px;
 }
 
+.mobile_line_break {
+    display: none;
+  }
+
+.mobile_plus_padding {
+    padding-left:35px;
+}
+
 /* help.html -- Accordion */
 .accordion {
     background-color: #b19c76;
@@ -518,6 +526,14 @@ input[type=submit] {
     .wrapper {
         width: 100%;
         margin: 0;
+    }
+
+    .mobile_line_break {
+        display: block;
+      }
+
+    .mobile_plus_padding {
+        padding-left: 0px;
     }
 }
 

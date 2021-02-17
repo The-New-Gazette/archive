@@ -45,19 +45,19 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <![endif]-->
 
         <div class="header-container">
-            <header class="wrapper clearfix center">
-                <img src="img/logo_new.svg" alt="The New Gazette" class="logo" style="display:block;">
+            <header class="wrapper clearfix center" style="display: block;">
+                <img src="img/logo_new.svg" alt="The New Gazette" class="logo"><br class="mobile_line_break"><br class="mobile_line_break"><span class="mobile_plus_padding" style="font-size:30pt; color:#b19c76; font-weight:bold;">+</span><br class="mobile_line_break"><img src="img/rcm.png" alt="Rocket City Mom" class="logo">
             </header>
         </div>
 
         <div class="main-container">
-            <div class="main wrapper clearfix">
+            <div class="main wrapper clearfix" style="padding-top: 0;">
 
                 <article>
                     <section class="section_block pitch_block">
-                        <h2 class="byline center">The local news you need — no more, no less.</h2>
+                        <h2 class="byline center">Concise local news for busy parents.</h2>
                         <p>
-                            Try a straightforward approach to local Huntsville news, with curated summaries delivered by email three days a week. We stick to the facts and always link to our sources. You can say goodbye to biased reporting, sensational headlines, and distracting ads.
+                            Rocket City Mom and The New Gazette have partnered on a 20% discount to give some margin back to busy parents! Try curated and concise headlines in your email inbox, 3x a week, that you can breeze through in less than 5 minutes. You can say goodbye to biased reporting, sensational headlines, and distracting ads.
                         </p>
                         <p>
                             Here's an <a href="https://sendy.newgazette.co/w/MdpkZxbQW763KMlEiimSVK1Q" target="_blank">example</a> of what you can expect to see.
@@ -67,7 +67,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                     <div class="pitch_form" style="margin-top:36px;">
                         <div class="form_flex_container">
                             <div class="form_flex_item center floating-subscribe" style="width:100%;">
-                                <button id="checkout" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
+                                <button id="checkout" role="link"><strong>Subscribe (20% off)</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
                                 <div id="error-message"></div>
 
                                 <script>
@@ -112,29 +112,8 @@ xmlns:fb="http://ogp.me/ns/fb#">
                                     <div class="g-recaptcha" data-sitekey="6LfuhuIUAAAAAOYws2ZitX90MV6hlcdnHePBcmjY"></div>
                                 </div> -->
                                 <div class="form_flex_item center floating-subscribe-tan" style="width:100%;">
-                                    <button id="checkout-button-2" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
+                                    <button id="checkout" role="link"><strong>Subscribe (20% off)</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
                                     <div id="error-message"></div>
-                                    <script>
-                                        (function() {
-                                            var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
-    
-                                            var checkoutButton = document.getElementById('checkout-button-2');
-                                            checkoutButton.addEventListener('click', function () {
-                                                stripe.redirectToCheckout({
-                                                    lineItems: [{price: 'price_1IKwfiHZTUfzXfXGT5UetMg8', quantity: 1}],
-                                                    mode: 'subscription',
-                                                    successUrl: 'https://newgazette.co/success-hsv.html',
-                                                    cancelUrl: 'https://newgazette.co/',
-                                                })
-                                                .then(function (result) {
-                                                    if (result.error) {
-                                                        var displayError = document.getElementById('error-message');
-                                                        displayError.textContent = result.error.message;
-                                                    }
-                                                });
-                                            });
-                                        })();
-                                    </script>
                                 </div>
                             </div>
                         </div>
