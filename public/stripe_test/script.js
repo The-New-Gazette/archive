@@ -23,7 +23,8 @@ var createCheckoutSession = function(priceId) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      priceId: priceId
+      priceId: priceId,
+      couponId: "AV5Jliar"
     })
   }).then(handleFetchResult);
 };
