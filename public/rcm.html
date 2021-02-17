@@ -37,6 +37,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="https://js.stripe.com/v3"></script>
         <script src="js/main.js"></script>
+        <script src="js/checkout.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -66,35 +67,14 @@ xmlns:fb="http://ogp.me/ns/fb#">
                     <div class="pitch_form" style="margin-top:36px;">
                         <div class="form_flex_container">
                             <div class="form_flex_item center floating-subscribe" style="width:100%;">
-                                <button id="checkout-button-1" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
+                                <button id="checkout" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
                                 <div id="error-message"></div>
 
                                 <script>
-                                // Set partners and prices
-                                var partner_list = [{name: "rcm", price: "price_1IKwfiHZTUfzXfXGT5UetMg8"}];
-                                var price_id = find_price(partner_list, "p", "price_1GwuJDHZTUfzXfXGzgeOA7BX");
-                                
-
-                                    (function() {
-                                      var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
-                                    
-                                      var checkoutButton = document.getElementById('checkout-button-1');
-                                      checkoutButton.addEventListener('click', function () {
-                                        stripe.redirectToCheckout({
-                                          lineItems: [{price: price_id, quantity: 1}],
-                                          mode: 'subscription',
-                                          successUrl: window.location.protocol + '//newgazette.co/success-hsv',
-                                          cancelUrl: window.location.protocol + '//newgazette.co',
-                                        })
-                                        .then(function (result) {
-                                          if (result.error) {
-                                            var displayError = document.getElementById('error-message');
-                                            displayError.textContent = result.error.message;
-                                          }
-                                        });
-                                      });
-                                    })();
-                                    </script>
+                                // // Set partners and prices
+                                // var partner_list = [{name: "rcm", price: "price_1IKwfiHZTUfzXfXGT5UetMg8"}];
+                                // var price_id = find_price(partner_list, "p", "price_1GwuJDHZTUfzXfXGzgeOA7BX");
+                                </script>
                             </div>
                         </div>
                     </div>
