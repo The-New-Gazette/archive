@@ -1,6 +1,6 @@
 // Create a Checkout Session with the selected plan ID
 var createCheckoutSession = function(priceId) {
-  return fetch("https://1kbs7rvps2.execute-api.us-east-1.amazonaws.com/tng/test/stripe/checkout/create-checkout-session", {
+  return fetch("https://7a970lzp20.execute-api.us-east-1.amazonaws.com/dev/create-checkout-session", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
