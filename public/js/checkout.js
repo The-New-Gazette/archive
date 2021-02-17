@@ -42,8 +42,23 @@ var showErrorMessage = function(message) {
   errorEl.style.display = "block";
 };
 
+
+// Simply this later
 document
-  .getElementsByClassName("checkout")
+  .getElementById("checkout-top")
+  .addEventListener("click", function(evt) {
+    createCheckoutSession("price_1IKwfiHZTUfzXfXGT5UetMg8", "AV5Jliar").then(function(data) {
+      // Call Stripe.js method to redirect to the new Checkout page
+      stripe
+        .redirectToCheckout({
+          sessionId: data.sessionId
+        })
+        .then(handleResult);
+    });
+  });
+
+document
+  .getElementById("checkout-bottom")
   .addEventListener("click", function(evt) {
     createCheckoutSession("price_1IKwfiHZTUfzXfXGT5UetMg8", "AV5Jliar").then(function(data) {
       // Call Stripe.js method to redirect to the new Checkout page
