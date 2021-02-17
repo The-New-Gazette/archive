@@ -43,7 +43,7 @@ var showErrorMessage = function(message) {
 };
 
 document
-  .getElementById("checkout")
+  .getElementsByClassName("checkout")
   .addEventListener("click", function(evt) {
     createCheckoutSession("price_1IKwfiHZTUfzXfXGT5UetMg8", "AV5Jliar").then(function(data) {
       // Call Stripe.js method to redirect to the new Checkout page
