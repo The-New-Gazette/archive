@@ -3,7 +3,7 @@ const sessionId = urlParams.get("session_id")
 let customerId;
 
 if (sessionId) {
-  fetch("/checkout-session?sessionId=" + sessionId)
+  fetch("https://1kbs7rvps2.execute-api.us-east-1.amazonaws.com/tng/test/stripe/checkout/checkout-session?sessionId=" + sessionId)
     .then(function(result){
       return result.json()
     })
