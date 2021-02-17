@@ -1,3 +1,5 @@
+var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
+
 // If a fetch error occurs, log it to the console and show it in the UI.
 var handleFetchResult = function(result) {
   if (!result.ok) {
