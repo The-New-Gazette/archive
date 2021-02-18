@@ -1,4 +1,4 @@
-var stripe = Stripe('pk_test_51GvR6wHZTUfzXfXG2PDWiTHvIwfgiBPtDi6ypDHy347NeAfpyTT9ssUkPOZaw3jtGl6hqpnMVEOJ9gy3gpDVoLsd00wExT8V9l');
+var stripe = Stripe('pk_live_zfgsI9EIiuSyXarhxxEaFuUQ00ClMitWig');
 
 // If a fetch error occurs, log it to the console and show it in the UI.
 var handleFetchResult = function(result) {
@@ -47,7 +47,7 @@ var showErrorMessage = function(message) {
 document
   .getElementById("checkout-top")
   .addEventListener("click", function(evt) {
-    createCheckoutSession("price_1IKwfiHZTUfzXfXGT5UetMg8", "AV5Jliar").then(function(data) {
+    createCheckoutSession("price_1ILYOFHZTUfzXfXGZ1MMeryc", "ZrJfAD38").then(function(data) {
       // Call Stripe.js method to redirect to the new Checkout page
       stripe
         .redirectToCheckout({
@@ -60,7 +60,7 @@ document
 document
   .getElementById("checkout-bottom")
   .addEventListener("click", function(evt) {
-    createCheckoutSession("price_1IKwfiHZTUfzXfXGT5UetMg8", "AV5Jliar").then(function(data) {
+    createCheckoutSession("price_1ILYOFHZTUfzXfXGZ1MMeryc", "ZrJfAD38").then(function(data) {
       // Call Stripe.js method to redirect to the new Checkout page
       stripe
         .redirectToCheckout({
