@@ -43,25 +43,77 @@ var showErrorMessage = function(message) {
 };
 
 
-// For loop to handle multiple checkout buttons on main page
+// Turn this into a checkout_button function since each partner will need one -- TO DO
 
-var button_count = 3;
-var i;
-for (i = 1; i <= button_count; i++) {
+// Inputs: Number of buttons on page, priceID, CouponID || ""
+// Example: (3, "price_123", "")
+function checkout_btn(btn_count, price, coupon) {
+  var button_count = btn_count;
+  var i;
+  for (i = 1; i <= button_count; i++) {
 
-  var button = document.getElementById('checkout-' + i);
-  if(button){
-    document
-    button.addEventListener("click", function(evt) {
-      createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "").then(function(data) {
-        // Call Stripe.js method to redirect to the new Checkout page
-        stripe
-          .redirectToCheckout({
-            sessionId: data.sessionId
-          })
-          .then(handleResult);
+    var button = document.getElementById('checkout-' + i);
+    if(button){
+      document
+      button.addEventListener("click", function(evt) {
+        createCheckoutSession(price, coupon).then(function(data) {
+          // Call Stripe.js method to redirect to the new Checkout page
+          stripe
+            .redirectToCheckout({
+              sessionId: data.sessionId
+            })
+            .then(handleResult);
+        });
       });
-    });
-  }
+    }
 
+  }
+  return;
 }
+
+// Main Page Checkout
+checkout_btn(3, "price_1GwuJDHZTUfzXfXGzgeOA7BX", "");
+
+// var button_count = 3;
+// var i;
+// for (i = 1; i <= button_count; i++) {
+
+//   var button = document.getElementById('checkout-' + i);
+//   if(button){
+//     document
+//     button.addEventListener("click", function(evt) {
+//       createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "").then(function(data) {
+//         // Call Stripe.js method to redirect to the new Checkout page
+//         stripe
+//           .redirectToCheckout({
+//             sessionId: data.sessionId
+//           })
+//           .then(handleResult);
+//       });
+//     });
+//   }
+
+// }
+
+// RCM Checkout
+
+// var button_count = 3;
+// var i;
+// for (i = 1; i <= button_count; i++) {
+
+//   var button = document.getElementById('checkout-' + i);
+//   if(button){
+//     document
+//     button.addEventListener("click", function(evt) {
+//       createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "").then(function(data) {
+//         // Call Stripe.js method to redirect to the new Checkout page
+//         stripe
+//           .redirectToCheckout({
+//             sessionId: data.sessionId
+//           })
+//           .then(handleResult);
+//       });
+//     });
+//   }
+
+// }
