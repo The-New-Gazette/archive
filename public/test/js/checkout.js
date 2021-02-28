@@ -49,7 +49,7 @@ var button_count = 3;
 var i;
 for (i = 1; i <= button_count; i++) {
 
-  var button = document.getElementById('checkout-'${i});
+  var button = document.getElementById('checkout-' + i);
   if(button){
     document
     button.addEventListener("click", function(evt) {
