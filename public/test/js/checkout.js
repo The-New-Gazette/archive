@@ -43,16 +43,15 @@ var showErrorMessage = function(message) {
 };
 
 
-// Turn this into a checkout_button function since each partner will need one -- TO DO
-
 // Inputs: Number of buttons on page, priceID, CouponID || ""
 // Example: (3, "price_123", "")
-function checkout_btn(btn_count, price, coupon) {
+// Example: (2, "price_123", "c321")
+function checkout_btn(btn_prefix, btn_count, price, coupon) {
   var button_count = btn_count;
   var i;
   for (i = 1; i <= button_count; i++) {
 
-    var button = document.getElementById('checkout-' + i);
+    var button = document.getElementById(btn_prefix + '-checkout-' + i);
     if(button){
       document
       button.addEventListener("click", function(evt) {
@@ -72,48 +71,7 @@ function checkout_btn(btn_count, price, coupon) {
 }
 
 // Main Page Checkout
-checkout_btn(3, "price_1GwuJDHZTUfzXfXGzgeOA7BX", "");
-
-// var button_count = 3;
-// var i;
-// for (i = 1; i <= button_count; i++) {
-
-//   var button = document.getElementById('checkout-' + i);
-//   if(button){
-//     document
-//     button.addEventListener("click", function(evt) {
-//       createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "").then(function(data) {
-//         // Call Stripe.js method to redirect to the new Checkout page
-//         stripe
-//           .redirectToCheckout({
-//             sessionId: data.sessionId
-//           })
-//           .then(handleResult);
-//       });
-//     });
-//   }
-
-// }
+checkout_btn("home", 3, "price_1GwuJDHZTUfzXfXGzgeOA7BX", "");
 
 // RCM Checkout
-
-// var button_count = 3;
-// var i;
-// for (i = 1; i <= button_count; i++) {
-
-//   var button = document.getElementById('checkout-' + i);
-//   if(button){
-//     document
-//     button.addEventListener("click", function(evt) {
-//       createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "").then(function(data) {
-//         // Call Stripe.js method to redirect to the new Checkout page
-//         stripe
-//           .redirectToCheckout({
-//             sessionId: data.sessionId
-//           })
-//           .then(handleResult);
-//       });
-//     });
-//   }
-
-// }
+checkout_btn("rcm", 2, "price_1IKwfiHZTUfzXfXGT5UetMg8", "AV5Jliar");
