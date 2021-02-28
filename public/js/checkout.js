@@ -42,30 +42,33 @@ var showErrorMessage = function(message) {
   errorEl.style.display = "block";
 };
 
+// Checkout Buttons
+function checkout_btn(btn_prefix, btn_count, price, coupon) {
+  var button_count = btn_count;
+  var i;
+  for (i = 1; i <= button_count; i++) {
 
-// Simply this later
-document
-  .getElementById("checkout-top")
-  .addEventListener("click", function(evt) {
-    createCheckoutSession("price_1ILYOFHZTUfzXfXGZ1MMeryc", "ZrJfAD38").then(function(data) {
-      // Call Stripe.js method to redirect to the new Checkout page
-      stripe
-        .redirectToCheckout({
-          sessionId: data.sessionId
-        })
-        .then(handleResult);
-    });
-  });
+    var button = document.getElementById(btn_prefix + '-checkout-' + i);
+    if(button){
+      document
+      button.addEventListener("click", function(evt) {
+        createCheckoutSession(price, coupon).then(function(data) {
+          // Call Stripe.js method to redirect to the new Checkout page
+          stripe
+            .redirectToCheckout({
+              sessionId: data.sessionId
+            })
+            .then(handleResult);
+        });
+      });
+    }
 
-document
-  .getElementById("checkout-bottom")
-  .addEventListener("click", function(evt) {
-    createCheckoutSession("price_1ILYOFHZTUfzXfXGZ1MMeryc", "ZrJfAD38").then(function(data) {
-      // Call Stripe.js method to redirect to the new Checkout page
-      stripe
-        .redirectToCheckout({
-          sessionId: data.sessionId
-        })
-        .then(handleResult);
-    });
-  });
+  }
+  return;
+}
+
+// Main Page Checkout
+checkout_btn("home", 3, "price_1H4JSAHZTUfzXfXG5JeVfFZd", "");
+
+// RCM Checkout
+checkout_btn("rcm", 2, "price_1ILYOFHZTUfzXfXGZ1MMeryc", "ZrJfAD38");
