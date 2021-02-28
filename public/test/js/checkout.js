@@ -53,7 +53,7 @@ for (i = 1; i <= button_count; i++) {
   if(button){
     document
     button.addEventListener("click", function(evt) {
-      createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "c7pmX1eb").then(function(data) {
+      createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "").then(function(data) {
         // Call Stripe.js method to redirect to the new Checkout page
         stripe
           .redirectToCheckout({
