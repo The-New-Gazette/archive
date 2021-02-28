@@ -49,17 +49,19 @@ var button_count = 3;
 var i;
 for (i = 1; i <= button_count; i++) {
 
-  document
-  .getElementById("checkout-${i}")
-  .addEventListener("click", function(evt) {
-    createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "c7pmX1eb").then(function(data) {
-      // Call Stripe.js method to redirect to the new Checkout page
-      stripe
-        .redirectToCheckout({
-          sessionId: data.sessionId
-        })
-        .then(handleResult);
+  var button = document.getElementById('checkout-${i}');
+  if(button){
+    document
+    button.addEventListener("click", function(evt) {
+      createCheckoutSession("price_1GwuJDHZTUfzXfXGzgeOA7BX", "c7pmX1eb").then(function(data) {
+        // Call Stripe.js method to redirect to the new Checkout page
+        stripe
+          .redirectToCheckout({
+            sessionId: data.sessionId
+          })
+          .then(handleResult);
+      });
     });
-  });
+  }
 
 }
