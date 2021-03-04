@@ -72,3 +72,6 @@ checkout_btn("home", 3, "price_1H4JSAHZTUfzXfXG5JeVfFZd", "");
 
 // RCM Checkout
 checkout_btn("rcm", 2, "price_1ILYOFHZTUfzXfXGZ1MMeryc", "ZrJfAD38");
+
+// ATM Checkout
+checkout_btn("atm", 2, "price_1H4JSAHZTUfzXfXG5JeVfFZd", "fjuuz05r");
