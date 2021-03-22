@@ -46,7 +46,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <div class="header-container">
             <header class="wrapper clearfix center">
-                <img src="img/logo_new.svg" alt="The New Gazette" class="logo" style="display:block;">
+                <img src="img/logo_new.svg" loading="eager" alt="The New Gazette" class="logo" style="display:block;">
             </header>
         </div>
 
@@ -76,15 +76,15 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <h2 class="byline center">How it Works</h2>
                         <div class="how_block">
                             <div class="how_block_child">
-                                <img src="img/news.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:15px;">
+                                <img src="img/news.svg" loading="eager" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:15px;">
                                 Our team of local wordsmiths curate the most important and relevant news from credible local sources.
                             </div>
                             <div class="how_block_child">
-                                <img src="img/award.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
+                                <img src="img/award.svg" loading="eager" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
                                 Each hand-selected story is condensed into a summary you can read in less than 10 seconds.
                             </div>
                             <div class="how_block_child">
-                                <img src="img/paper-plane.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
+                                <img src="img/paper-plane.svg" loading="eager" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
                                 A collection of summarized news lands in your email inbox 3x a week. Skim it in 5 minutes or less.
                             </div>
                         </div>
@@ -102,7 +102,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                         <div class="pitch_form" style="margin-top:36px;">
                             <div class="form_flex_container">
                                 <div class="form_flex_item center floating-subscribe-tan" style="width:100%;">
-                                    <button id="home-checkout-2" role="link"><strong>Subscribe (20% off)</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
+                                    <button id="home-checkout-2" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +168,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                     </section>
 
                     <section style="margin-top:72px;">
-                        <img src="img/mockup.svg" style="display:block; margin:auto;">
+                        <img src="img/mockup.svg" loading="lazy" style="display:block; margin:auto;">
                     </section>
 
                     <section class="footer_block center">
@@ -178,7 +178,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
                             <div class="pitch_form" style="margin-top:36px;">
                                 <div class="form_flex_container">
                                     <div class="form_flex_item center floating-subscribe-tan" style="width:100%;">
-                                        <button id="home-checkout-3" role="link"><strong>Subscribe (20% off)</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
+                                        <button id="home-checkout-3" role="link"><strong>Subscribe Now</strong><p style="font-size:14px; margin-top: 8px; margin-bottom:0;">Start a 2 week free trial</p></button>
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +192,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <div class="footer-container">
             <footer class="wrapper center">
                 <a href="https://newgazette.co" target="_blank" >
-                    <img src="img/teardrop.svg" style="display: block; margin:auto; margin-bottom:16px;" width="40">
+                    <img src="img/teardrop.svg" loading="lazy" style="display: block; margin:auto; margin-bottom:16px;" width="40">
                 </a>
                 <div class="footer_text">
                     <div style="margin:0; padding:0; line-height:1.5; padding-bottom: 16px;">
@@ -224,6 +224,10 @@ xmlns:fb="http://ogp.me/ns/fb#">
             document.getElementById("uuid_top").value = uuid;
             document.getElementById("uuid_bottom").value = uuid;
         </script>
+
+        <!-- Cloudflare Web Analytics -->
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5e3c90dc86ea491a9feb9bf7853415ff"}'></script>
+        <!-- End Cloudflare Web Analytics -->
 
     </body>
 </html>
