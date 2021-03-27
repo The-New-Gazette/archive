@@ -78,3 +78,6 @@ checkout_btn("rcm", 2, "price_1IKwfiHZTUfzXfXGT5UetMg8", "AV5Jliar");
 
 // ATM Checkout
 checkout_btn("atm", 2, "price_1GwuJDHZTUfzXfXGzgeOA7BX", "q47d1yAU");
+
+// DI Checkout
+checkout_btn("di", 2, "price_1GwuJDHZTUfzXfXGzgeOA7BX", "");
