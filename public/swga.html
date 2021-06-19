@@ -19,7 +19,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <title>The New Gazette</title>
         <meta name="description" content="Curated and concise local news delivered to your inbox three days a week."></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="https://newgazette.co/img/logo_bg.png" />
+        <meta property="og:image" content="https://newgazette.co/img/logo_bg2.png" />
         
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -36,7 +36,8 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="https://js.stripe.com/v3/"></script>
-        <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+        <script src="js/main.js"></script>
+        <script src="js/checkout.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -45,7 +46,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <div class="header-container">
             <header class="wrapper clearfix center">
-                <img src="img/logo_new.svg" alt="The New Gazette" class="logo" style="display:block;">
+                <img src="img/logo_new.svg" loading="eager" alt="The New Gazette" class="logo" style="display:block;">
             </header>
         </div>
 
@@ -54,50 +55,28 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
                 <article>
                     <section class="section_block pitch_block">
-                        <h2 class="byline center">Just the local news you need — no more, no less.</h2>
+                        <h2 class="byline center">The local news you need — no more, no less.</h2>
                         <p>
-                            We are launching a BETA for the SWGA Wiregrass region! We’ll deliver locally-curated news summaries to your inbox weekly throughout the test period.
-                        </p>
-                        <p>
-                            Our current focus in and around Decatur county, but we’d love to know what subjects and geographic areas are most relevant to you. Subscribe now and help us build a better way to stay informed in SWGA!
+                            This service is no longer available as of July 2021. Providing curated local news throughout 2020 was a public service that we were proud to bring to Bainbridge and the Southwest GA area. However, it's now time to move on to new adventures and new ideas. All of our previous editions will be made freely available on this site after July 2021. Thanks for visiting.
                         </p>
                     </section>
 
-                    <div class="pitch_form">
-                        <div class="form_flex_container">
-                            <div class="form_flex_container">
-                                <div class="form_flex_item center floating-subscribe" style="width:100%;">
-                                    <form action="https://sendy.newgazette.co/subscribe" method="POST" accept-charset="utf-8">
-                                    <input type="email" name="email" id="email" placeholder="name@email.com" style="margin-bottom:24px;">
-                                    <div style="display:none;">
-                                        <label for="hp">HP</label><br/>
-                                        <input type="text" name="hp" id="hp"/>
-                                    </div>
-                                    <input type="hidden" name="list" value="GoWA72KKWNnva0gnakOXuA"/>
-                                    <input type="hidden" name="subform" value="yes"/>
-                                    <button type="submit" name="submit" id="submit"><strong>Subscribe Now</strong></button>
-                                </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>        
-
-                    <section style="margin-top:72px;">
-                        <h2 class="byline center">How it Works</h2>
+                    <section class="testimonial_block">
+                        <h2 class="byline center">What Our Readers Said</h2>
                         <div class="how_block">
                             <div class="how_block_child">
-                                <img src="img/news.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:15px;">
-                                Our local editors collect the most important and relevant news from credible local sources.
+                                <span style="font-size: 18px; display:block; margin-bottom:8px;">"I feel relieved every time I see The New Gazette in my inbox. Before, I would wonder what I was missing in my community, but now, I can rely on The New Gazette to provide the latest information in one spot, helping me keep a pulse on my city's news."</span>
+                                <span style="font-style: italic; font-size:13px;">- Rachel Lane PhD, RD <br> Huntsville</span>
                             </div>
                             <div class="how_block_child">
-                                <img src="img/award.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
-                                We summarize each curated story into a simple and concise summary you can read in less than 10 seconds.
-                            </div>
-                            <div class="how_block_child">
-                                <img src="img/paper-plane.svg" alt="The New Gazette" style="display:block; margin:auto; margin-bottom:16px;">
-                                The curated news hits your inbox at a regular cadence each week.
+                                <span style="font-size: 18px; display:block; margin-bottom:8px;">"As a realtor I need to have a pulse on what's going on locally. I have not done a good job of this because the task can feel overwhelming. Once I found out about The New Gazette, I said to myself, 'That's just what I need.' And it was."</span>
+                                <span style="font-style: italic; font-size:13px;">- John Henson <br> Huntsville</span>
                             </div>
                         </div>
+                    </section>
+
+                    <section style="margin-top:72px;">
+                        <img src="img/mockup.svg" loading="lazy" style="display:block; margin:auto;">
                     </section>
 
                 </article>
@@ -108,22 +87,21 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <div class="footer-container">
             <footer class="wrapper center">
                 <a href="https://newgazette.co" target="_blank" >
-                    <img src="img/teardrop.svg" style="display: block; margin:auto; margin-bottom:16px;" width="40">
+                    <img src="img/teardrop.svg" loading="lazy" style="display: block; margin:auto; margin-bottom:16px;" width="40">
                 </a>
                 <div class="footer_text">
                     <div style="margin:0; padding:0; line-height:1.5; padding-bottom: 16px;">
                         &copy; The New Gazette, 2020 <br> All rights reserved.
                     </div>
-                    <div style="display:block;">
+                    <!-- <div style="display:block;">
                         <a href="about.html">About</a> 
                         <span class="footer_bar">&#124;</span>
                         <a href="help.html">Help</a>
-                    </div>
+                    </div> -->
                 </div>
+                <div id="error-message" style="background-color: #b19c76;"></div>
             </footer>
         </div>
-
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics -->
         <script>
@@ -137,9 +115,14 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
         <script type="text/javascript">
             // Set and new user uuid values
-            document.getElementById("referrer_uuid").value = getQueryVariable("u");
-            document.getElementById("uuid").value = create_UUID();
+            const uuid = create_UUID();
+            document.getElementById("uuid_top").value = uuid;
+            document.getElementById("uuid_bottom").value = uuid;
         </script>
+
+        <!-- Cloudflare Web Analytics -->
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5e3c90dc86ea491a9feb9bf7853415ff"}'></script>
+        <!-- End Cloudflare Web Analytics -->
 
     </body>
 </html>
