@@ -38,6 +38,7 @@ a:link, a:visited, a:active {
 /* mouse over link */
 a:hover {
   color:#107d9d;
+  text-decoration: underline;
 }
 
 audio,
@@ -145,10 +146,10 @@ body {
 ul {
     list-style: none;
     list-style-type: none; 
-    margin-left: 0;
+    /*margin-left: 0;
     padding-left: 12.5%;
     padding-right: 10%;
-    text-indent: -1em;
+    text-indent: -1em;*/
 }
 
 li {
