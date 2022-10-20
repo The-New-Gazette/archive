@@ -30,28 +30,14 @@ hr {
     padding: 0;
 }
 
-ul {
-  list-style-type: none;
-}
-
-/* unvisited link */
-a:link {
+a:link, a:visited, a:active {
   color:#107d9d;
-}
-
-/* visited link */
-a:visited {
-  color:#107d9d;
+  text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
-  color:#D8F3FB;
-}
-
-/* selected link */
-a:active {
-  color:#D8F3FB;
+  color:#107d9d;
 }
 
 audio,
@@ -158,6 +144,7 @@ body {
 
 ul {
     list-style: none;
+    list-style-type: none; 
     margin-left: 0;
     padding-left: 12.5%;
     padding-right: 10%;
