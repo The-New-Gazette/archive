@@ -30,6 +30,30 @@ hr {
     padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
+/* unvisited link */
+a:link {
+  color:#107d9d;
+}
+
+/* visited link */
+a:visited {
+  color:#107d9d;
+}
+
+/* mouse over link */
+a:hover {
+  color:#D8F3FB;
+}
+
+/* selected link */
+a:active {
+  color:#D8F3FB;
+}
+
 audio,
 canvas,
 iframe,
